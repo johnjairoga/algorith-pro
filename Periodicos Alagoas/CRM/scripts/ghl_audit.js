@@ -18,8 +18,25 @@
 require('dotenv').config();
 
 const axios = require('axios');
-const chalk = require('chalk');
+const chalk = require('chalk').default || require('chalk');
 const fs = require('fs');
+
+// Asegurar que chalk tiene los métodos correctos
+if (!chalk.bold) {
+  chalk = {
+    green: (str) => `\x1b[32m${str}\x1b[0m`,
+    red: (str) => `\x1b[31m${str}\x1b[0m`,
+    blue: (str) => `\x1b[34m${str}\x1b[0m`,
+    yellow: (str) => `\x1b[33m${str}\x1b[0m`,
+    cyan: (str) => `\x1b[36m${str}\x1b[0m`,
+    gray: (str) => `\x1b[90m${str}\x1b[0m`,
+    bold: {
+      blue: (str) => `\x1b[1;34m${str}\x1b[0m`,
+      green: (str) => `\x1b[1;32m${str}\x1b[0m`,
+      cyan: (str) => `\x1b[1;36m${str}\x1b[0m`
+    }
+  };
+}
 
 // ============================================================================
 // CONFIGURACIÓN
@@ -27,7 +44,7 @@ const fs = require('fs');
 
 const GHL_API_TOKEN = process.env.GHL_PIT_TOKEN || 'pit-fa036e1b-49a8-442d-99ff-cd86cc3ec5d5';
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || 'XuChmr0YIHg823jqvZTN';
-const GHL_API_URL = 'https://services.leadconnectorhq.com/v1';
+const GHL_API_URL = 'https://api.gohighlevel.com/v1';
 
 const headers = {
   'Authorization': `Bearer ${GHL_API_TOKEN}`,
@@ -316,7 +333,7 @@ ${report.data.pipelines.map((pipeline, idx) => `
 **Etapas:** ${pipeline.stageCount}
 
 \`\`\`
-${pipeline.stages.map(stage => \`• \${stage.name}\`).join('\n')}
+${pipeline.stages.map(stage => '• ' + stage.name).join('\n')}
 \`\`\`
 `).join('\n')}
 
@@ -331,7 +348,7 @@ ${report.data.customFields.map((field, idx) => `
 
 | Propiedad | Valor |
 |-----------|-------|
-| **Tipo** | \`${field.fieldType}\` |
+| **Tipo** | \\\`${field.fieldType}\\\` |
 | **Requerido** | ${field.required ? '✅ Sí' : '❌ No'} |
 | **Opciones** | ${field.options.length > 0 ? field.options.join(', ') : 'N/A'} |
 `).join('\n')}

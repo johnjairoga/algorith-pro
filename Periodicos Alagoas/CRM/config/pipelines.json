@@ -1,0 +1,79 @@
+{
+  "pipelines": [
+    {
+      "name": "REPD — Economia & Políticas Públicas",
+      "description": "Pipeline para pesquisadores de economia, desenvolvimento e políticas públicas",
+      "icon": "📊",
+      "stages": [
+        {
+          "name": "Nuevo Lead",
+          "description": "Lead recém capturado do formulário"
+        },
+        {
+          "name": "Cualificado",
+          "description": "Lead passou pela qualificação automática"
+        },
+        {
+          "name": "En Contacto",
+          "description": "Equipo entrando en contacto con el lead"
+        },
+        {
+          "name": "Convertido",
+          "description": "Lead convertido en miembro de la comunidad"
+        }
+      ],
+      "defaultTag": "REPD",
+      "color": "#1E3A8A"
+    },
+    {
+      "name": "Revista Ciência Agrícola — Agronomía & Producción",
+      "description": "Pipeline para pesquisadores de agronomia, ciências do solo e produção animal/vegetal",
+      "icon": "🌾",
+      "stages": [
+        {
+          "name": "Nuevo Lead",
+          "description": "Lead recém capturado do formulário"
+        },
+        {
+          "name": "Cualificado",
+          "description": "Lead passou pela qualificação automática"
+        },
+        {
+          "name": "En Contacto",
+          "description": "Equipo entrando en contacto con el lead"
+        },
+        {
+          "name": "Convertido",
+          "description": "Lead convertido en miembro de la comunidad"
+        }
+      ],
+      "defaultTag": "REVISTA_CIENCIA_AGRICOLA",
+      "color": "#10B981"
+    },
+    {
+      "name": "Revista Crítica Histórica — Historia & Humanidades",
+      "description": "Pipeline para pesquisadores de história, historiografia e estudos históricos",
+      "icon": "📖",
+      "stages": [
+        {
+          "name": "Nuevo Lead",
+          "description": "Lead recém capturado do formulário"
+        },
+        {
+          "name": "Cualificado",
+          "description": "Lead passou pela qualificação automática"
+        },
+        {
+          "name": "En Contacto",
+          "description": "Equipo entrando en contacto con el lead"
+        },
+        {
+          "name": "Convertido",
+          "description": "Lead convertido en miembro de la comunidad"
+        }
+      ],
+      "defaultTag": "REVISTA_CRITICA_HISTORICA",
+      "color": "#9333EA"
+    }
+  ]
+}

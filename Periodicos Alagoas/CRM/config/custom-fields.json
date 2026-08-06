@@ -1,0 +1,95 @@
+{
+  "customFields": [
+    {
+      "name": "Nombre",
+      "type": "text",
+      "fieldType": "text",
+      "required": true,
+      "description": "Nombre completo del investigador",
+      "placeholder": "Ej: Juan García López",
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "Email",
+      "type": "email",
+      "fieldType": "email",
+      "required": true,
+      "description": "Email de contacto principal",
+      "placeholder": "ej@ejemplo.com",
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "WhatsApp",
+      "type": "phone",
+      "fieldType": "phone",
+      "required": true,
+      "description": "Número de WhatsApp con código de país",
+      "placeholder": "+55 85 9XXXX-XXXX",
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "Área de Investigación",
+      "type": "select",
+      "fieldType": "select",
+      "required": true,
+      "description": "Área principal de investigación",
+      "options": [
+        "Economía, Desarrollo, Administración, Políticas Públicas",
+        "Agronomía, Ciencias del Suelo, Producción Animal/Vegetal",
+        "Historia, Historiografía, Estudios Históricos",
+        "Otras Ciencias Sociales Aplicadas"
+      ],
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "Nivel Académico",
+      "type": "select",
+      "fieldType": "select",
+      "required": true,
+      "description": "Nivel académico actual del investigador",
+      "options": [
+        "Estudiante de grado",
+        "Estudiante de maestría/especialización",
+        "Estudiante de doctorado",
+        "Investigador/Profesor con posdoctorado",
+        "Investigador/Profesor establecido"
+      ],
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "Artículo Listo",
+      "type": "select",
+      "fieldType": "select",
+      "required": true,
+      "description": "Estado del artículo para publicación",
+      "options": [
+        "Sí, tengo artículo pronto",
+        "No, pero estoy escribiendo",
+        "Aún no, solo explorando oportunidades"
+      ],
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "Cuándo Publicar",
+      "type": "select",
+      "fieldType": "select",
+      "required": true,
+      "description": "Timeline estimado para publicación",
+      "options": [
+        "Próximos 30 días",
+        "Próximos 3 meses",
+        "Próximos 6 meses",
+        "Sin fecha definida"
+      ],
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    },
+    {
+      "name": "LGPD Aceptado",
+      "type": "checkbox",
+      "fieldType": "checkbox",
+      "required": true,
+      "description": "Consentimiento para tratamiento de datos personales (LGPD Brasil)",
+      "parentId": "tGExRU0UDHiqYAG9YeYE"
+    }
+  ]
+}

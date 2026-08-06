@@ -1,0 +1,56 @@
+{
+  "tags": {
+    "revista": [
+      "REPD",
+      "REVISTA_CIENCIA_AGRICOLA",
+      "REVISTA_CRITICA_HISTORICA"
+    ],
+    "qualificacao": [
+      "LEAD_QUENTE",
+      "LEAD_EDUCACIONAL",
+      "LEAD_PARCIAL"
+    ],
+    "timeline": [
+      "INTENT_30_DIAS",
+      "INTENT_3_MESES",
+      "INTENT_6_MESES",
+      "INTENT_SIN_FECHA"
+    ],
+    "origem": [
+      "lead-landing-page",
+      "lead-meta-ads",
+      "lead-google-ads",
+      "lead-importacao"
+    ],
+    "status": [
+      "ativo",
+      "inativo",
+      "bloqueado",
+      "processando"
+    ]
+  },
+  "tagColors": {
+    "REPD": "#1E3A8A",
+    "REVISTA_CIENCIA_AGRICOLA": "#10B981",
+    "REVISTA_CRITICA_HISTORICA": "#9333EA",
+    "LEAD_QUENTE": "#EF4444",
+    "LEAD_EDUCACIONAL": "#F97316",
+    "LEAD_PARCIAL": "#9CA3AF",
+    "INTENT_30_DIAS": "#3B82F6",
+    "INTENT_3_MESES": "#8B5CF6",
+    "INTENT_6_MESES": "#EC4899",
+    "INTENT_SIN_FECHA": "#64748B"
+  },
+  "tagDescriptions": {
+    "REPD": "Economia & Políticas Públicas",
+    "REVISTA_CIENCIA_AGRICOLA": "Agronomía & Producción",
+    "REVISTA_CRITICA_HISTORICA": "Historia & Humanidades",
+    "LEAD_QUENTE": "Artículo listo - WhatsApp en 1 hora",
+    "LEAD_EDUCACIONAL": "Estudiante explorando - Email sequence 3 días",
+    "LEAD_PARCIAL": "Solo datos básicos - Sin acción automática",
+    "INTENT_30_DIAS": "Publicar en próximos 30 días",
+    "INTENT_3_MESES": "Publicar en próximos 3 meses",
+    "INTENT_6_MESES": "Publicar en próximos 6 meses",
+    "INTENT_SIN_FECHA": "Sin fecha definida"
+  }
+}

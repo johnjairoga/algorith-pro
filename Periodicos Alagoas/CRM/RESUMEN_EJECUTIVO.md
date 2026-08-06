@@ -126,7 +126,7 @@ SEMANA 4-5 (24 ago - 6 sep)
 
 ## 🎯 ESTRUCTURA EN GHL
 
-### Tags Creados (9 totales)
+### Tags Creados (8 totales)
 
 **Por Revista (3):**
 ```
@@ -135,33 +135,57 @@ SEMANA 4-5 (24 ago - 6 sep)
 📍 REVISTA_CRITICA_HISTORICA — Historia & Humanidades
 ```
 
-**Por Cualificación (3):**
+**Por Timeline + Calificación (4):**
 ```
-🔥 LEAD_QUENTE — Artículo listo → WhatsApp en 1h
-📚 LEAD_EDUCACIONAL — Estudiante explorando → Email sequence 3d
-💤 LEAD_PARCIAL — Solo datos básicos
-```
-
-**Por Timeline (3):**
-```
-⚡ INTENT_30_DIAS
-⚡ INTENT_3_MESES
-⚡ INTENT_6_MESES
-⚡ INTENT_SIN_FECHA
+⚡ INTENT_30_DIAS — Publicar nos próximos 30 dias (Alta urgência)
+⚡ INTENT_3_MESES — Publicar nos próximos 3 meses (Urgência média)
+⚡ INTENT_6_MESES — Publicar nos próximos 6 meses (Urgência baixa)
+⚡ INTENT_SIN_FECHA — Sem data definida (Exploração)
 ```
 
-### Pipelines Creados (3 totales)
+**Por Origen/Origem (4):**
+```
+🌐 aluno-landing-page
+🌐 aluno-meta-ads
+🌐 aluno-google-ads
+🌐 aluno-importacao
+```
+
+**Eliminados (deprecated):**
+```
+❌ LEAD_QUENTE (substituído por INTENT_30_DIAS)
+❌ LEAD_EDUCACIONAL (substituído por INTENT_3_MESES + INTENT_6_MESES)
+❌ LEAD_PARCIAL (substituído por INTENT_SIN_FECHA)
+❌ lead-landing-page, lead-meta-ads, lead-google-ads, lead-importacao (renomeados para aluno-*)
+```
+
+### Pipelines Creados (3 totales) — NUEVA JORNADA DEL ALUNO
 
 ```
-1️⃣ REPD
-   └─ Nuevo Lead → Cualificado → En Contacto → Convertido
+1️⃣ REPD — Economia & Políticas Públicas
+   ├─ Aluno Cadastrado (Aluno preencheu o formulário)
+   ├─ Dados Confirmados (Aluno recebeu confirmação de dados)
+   ├─ Convite do Grupo Enviado (Aluno recebeu convite WhatsApp)
+   ├─ No Grupo — Em Aquecimento (Aluno sendo aquecido continuamente)
+   └─ Convertido — Artigo Submetido (Aluno submeteu artigo à revista)
 
-2️⃣ REVISTA_CIENCIA_AGRICOLA
-   └─ Nuevo Lead → Cualificado → En Contacto → Convertido
+2️⃣ REVISTA_CIENCIA_AGRICOLA — Agronomía & Producción
+   ├─ Aluno Cadastrado
+   ├─ Dados Confirmados
+   ├─ Convite do Grupo Enviado
+   ├─ No Grupo — Em Aquecimento
+   └─ Convertido — Artigo Submetido
 
-3️⃣ REVISTA_CRITICA_HISTORICA
-   └─ Nuevo Lead → Cualificado → En Contacto → Convertido
+3️⃣ REVISTA_CRITICA_HISTORICA — Historia & Humanidades
+   ├─ Aluno Cadastrado
+   ├─ Dados Confirmados
+   ├─ Convite do Grupo Enviado
+   ├─ No Grupo — Em Aquecimento
+   └─ Convertido — Artigo Submetido
 ```
+
+**Cambio de modelo:** Los pipelines anteriores tenían 4 etapas genéricas de venta (Nuevo Lead, Cualificado, En Contacto, Convertido). Se han rediseñado con **5 etapas específicas para la jornada del alumno**, reflejando el flujo real:
+1. Captura desde anuncio → 2. Confirmación de datos → 3. Invitación a grupo WhatsApp → 4. Aquecimiento/Nurturing en grupo → 5. Conversión (artículo submetido)
 
 ### Campos Personalizados (8 totales)
 
@@ -178,59 +202,85 @@ SEMANA 4-5 (24 ago - 6 sep)
 
 ---
 
-## 🤖 AUTOMATIZACIONES CREADAS (4 totales)
+## 🤖 AUTOMATIZACIONES CREADAS (6+ totales, en revisión)
 
-### 1️⃣ Automation: Lead Quente → WhatsApp 1h
+### 1️⃣ Automation: Aluno Cadastrado → Mensaje de Bienvenida
 
 ```
-TRIGGER: Tag = LEAD_QUENTE
-DELAY: 1 hora
-ACCIÓN: Enviar WhatsApp personalizado
+TRIGGER: Aluno ingresa a "Aluno Cadastrado" en cualquier pipeline
+DELAY: Inmediato (o 30 min)
+ACCIÓN: WhatsApp personalizado con datos del aluno
 
 Mensaje:
-"Olá [Nombre]! 👋 Ótimo! Vi que você tem um artigo pronto. 
-Vamos agendar uma ligação com nossos especialistas?"
+"Olá [Nombre]! 👋 Recebemos seus dados! 
+Já está na nossa revista de [Área]. Aguarde novidades..."
 ```
 
-### 2️⃣ Automation: Lead Educacional → Email Sequence 3d
+### 2️⃣ Automation: Transición a "Datos Confirmados"
 
 ```
-TRIGGER: Tag = LEAD_EDUCACIONAL
-DELAY: 1 día
-ACCIONES:
-  • Día 1: Email "Como estruturar um artigo científico"
-  • Día 2: Email "Cronograma de Submissão 2026"
-  • Día 3: Email "Checklist Antes de Enviar"
+TRIGGER: Tag = INTENT_30_DIAS (alta urgência)
+DELAY: 1-2 horas
+ACCIÓN: Enviar WhatsApp confirmando los datos
+
+Mensaje:
+"Perfeito! 🎉 Confirmamos que você tem um artigo pronto.
+Vamos te colocar no grupo de especialistas..."
 ```
 
-### 3️⃣ Automation: Bienvenida Universal → WhatsApp 24h
+### 3️⃣ Automation: Invitación a Grupo WhatsApp
 
 ```
-TRIGGER: Lead completado + Tags de revista
-DELAY: 24 horas
-ACCIÓN: Enviar WhatsApp personalizado por revista
+TRIGGER: Transición a "Convite do Grupo Enviado"
+DELAY: Inmediato
+ACCIÓN: Enviar link de invitación al grupo WhatsApp por revista
 
 Ejemplos:
-  REPD: "Bem-vindo à REPD! 🎓 Você foi designado para..."
-  Agrícola: "Bem-vindo à Revista Ciência Agrícola! 🌾 Você foi..."
-  Histórica: "Bem-vindo à Revista Crítica Histórica! 📖 Você foi..."
+  REPD: "https://chat.whatsapp.com/REPD..."
+  Agrícola: "https://chat.whatsapp.com/AGRICOLA..."
+  Histórica: "https://chat.whatsapp.com/HISTORICA..."
 ```
 
-### 4️⃣ Automation: Notificación Interna → Email
+### 4️⃣ Automation: Secuencia de Aquecimiento en Grupo
 
 ```
-TRIGGER: Nuevo lead completado
+TRIGGER: Aluno ingresa a "No Grupo — Em Aquecimento"
+DELAY: Diario (variación según engagement)
+ACCIONES:
+  • Día 1: "Dica: Estrutura de Artigo Científico"
+  • Día 3: "Histórico: Artigos aceitos en nuestra revista"
+  • Día 7: "Checklist: Antes de submeter"
+  • Día 14: "Contacto personal: Resolvemos dudas"
+```
+
+### 5️⃣ Automation: Notificación Interna
+
+```
+TRIGGER: Nuevo aluno completado
 DELAY: Inmediato
 ACCIÓN: Email al equipo de UFAL
 
 Información:
-  • Datos del lead (Nombre, Email, WhatsApp)
+  • Datos del aluno (Nombre, Email, WhatsApp)
   • Revista asignada
   • Área de investigación
-  • Nivel académico
-  • Timeline de publicación
-  • Link directo en GHL
+  • Timeline de publicación (INTENT_*)
+  • Link directo en GHL para seguimiento
 ```
+
+### 6️⃣ Automation: Recordatorio de Submisión
+
+```
+TRIGGER: 2 días antes del vencimiento de INTENT_* tags
+DELAY: 2 días antes
+ACCIÓN: WhatsApp recordatorio personalizado
+
+Ejemplos:
+  INTENT_30_DIAS: "¿Listo para someter? Solo 2 días..."
+  INTENT_3_MESES: "¿Cómo va tu artículo? Estamos aquí para ayudar"
+```
+
+**Nota:** Las automatizaciones relacionadas con LEAD_QUENTE/EDUCACIONAL/PARCIAL han sido **reemplazadas** por un sistema basado en **INTENT_* tags** + **pipeline stages** para una mejor alineación con la jornada del aluno.
 
 ---
 
@@ -344,7 +394,7 @@ CRM/
 
 | Rol | Persona | Email | WhatsApp |
 |-----|---------|-------|----------|
-| **Lead Técnico** | John Jairo | john@triadeflow.com.br | +55 85 9XXXX-XXXX |
+| **Lead Técnico** | John Jairo | john@artificialctrl.com.br | +55 85 9XXXX-XXXX |
 | **Coordinador** | Ronaldo Ferreira | ronaldo.ferreira@ufal.edu.br | +55 82 9XXXX-XXXX |
 
 ---

@@ -6,20 +6,24 @@
       "icon": "📊",
       "stages": [
         {
-          "name": "Nuevo Lead",
-          "description": "Lead recém capturado do formulário"
+          "name": "Aluno Cadastrado",
+          "description": "Aluno preencheu o formulário do anúncio"
         },
         {
-          "name": "Cualificado",
-          "description": "Lead passou pela qualificação automática"
+          "name": "Dados Confirmados",
+          "description": "Aluno recebeu mensagem confirmando os dados que deixou"
         },
         {
-          "name": "En Contacto",
-          "description": "Equipo entrando en contacto con el lead"
+          "name": "Convite do Grupo Enviado",
+          "description": "Aluno recebeu convite para o grupo de WhatsApp"
         },
         {
-          "name": "Convertido",
-          "description": "Lead convertido en miembro de la comunidad"
+          "name": "No Grupo — Em Aquecimento",
+          "description": "Aluno dentro do grupo, sendo aquecido continuamente para submeter o artigo"
+        },
+        {
+          "name": "Convertido — Artigo Submetido",
+          "description": "Aluno submeteu seu artigo científico à revista"
         }
       ],
       "defaultTag": "REPD",
@@ -31,20 +35,24 @@
       "icon": "🌾",
       "stages": [
         {
-          "name": "Nuevo Lead",
-          "description": "Lead recém capturado do formulário"
+          "name": "Aluno Cadastrado",
+          "description": "Aluno preencheu o formulário do anúncio"
         },
         {
-          "name": "Cualificado",
-          "description": "Lead passou pela qualificação automática"
+          "name": "Dados Confirmados",
+          "description": "Aluno recebeu mensagem confirmando os dados que deixou"
         },
         {
-          "name": "En Contacto",
-          "description": "Equipo entrando en contacto con el lead"
+          "name": "Convite do Grupo Enviado",
+          "description": "Aluno recebeu convite para o grupo de WhatsApp"
         },
         {
-          "name": "Convertido",
-          "description": "Lead convertido en miembro de la comunidad"
+          "name": "No Grupo — Em Aquecimento",
+          "description": "Aluno dentro do grupo, sendo aquecido continuamente para submeter o artigo"
+        },
+        {
+          "name": "Convertido — Artigo Submetido",
+          "description": "Aluno submeteu seu artigo científico à revista"
         }
       ],
       "defaultTag": "REVISTA_CIENCIA_AGRICOLA",
@@ -56,20 +64,24 @@
       "icon": "📖",
       "stages": [
         {
-          "name": "Nuevo Lead",
-          "description": "Lead recém capturado do formulário"
+          "name": "Aluno Cadastrado",
+          "description": "Aluno preencheu o formulário do anúncio"
         },
         {
-          "name": "Cualificado",
-          "description": "Lead passou pela qualificação automática"
+          "name": "Dados Confirmados",
+          "description": "Aluno recebeu mensagem confirmando os dados que deixou"
         },
         {
-          "name": "En Contacto",
-          "description": "Equipo entrando en contacto con el lead"
+          "name": "Convite do Grupo Enviado",
+          "description": "Aluno recebeu convite para o grupo de WhatsApp"
         },
         {
-          "name": "Convertido",
-          "description": "Lead convertido en miembro de la comunidad"
+          "name": "No Grupo — Em Aquecimento",
+          "description": "Aluno dentro do grupo, sendo aquecido continuamente para submeter o artigo"
+        },
+        {
+          "name": "Convertido — Artigo Submetido",
+          "description": "Aluno submeteu seu artigo científico à revista"
         }
       ],
       "defaultTag": "REVISTA_CRITICA_HISTORICA",

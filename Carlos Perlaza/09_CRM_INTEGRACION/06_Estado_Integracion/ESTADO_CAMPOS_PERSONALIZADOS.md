@@ -266,29 +266,44 @@ Resultado esperado:
 
 ## 📌 NOTAS TÉCNICAS
 
-### Por qué se crean manualmente en GHL
+### ✅ ACTUALIZACIÓN: SE PUEDE CREAR POR API
 
-**Limitación de API GHL:**
-- ✅ Endpoints de LECTURA: Disponibles en API v2.0 y v1
-- ❌ Endpoints de CREACIÓN: NO existen en ninguna versión de API de GHL
-- GHL no expone programáticamente la capacidad de crear custom fields
+**Descubrimiento importante:**
+El endpoint SÍ existe para crear custom fields. No es una limitación de API.
 
-**Esto es válido en:**
-- API v2.0 (nueva)
-- API v1 (anterior)
-- Todas las integraciones privadas
+**Endpoint correcto:**
+```
+POST /locations/{locationId}/customFields
+```
 
-**Razón técnica:**
-GHL reserva la creación de custom fields solo para GHL Console UI por razones de gobernanza y seguridad (permisos IAM administrativos).
+**Parámetros requeridos:**
+```json
+{
+  "name": "Nombre del campo",
+  "dataType": "DATE|TEXT|SINGLE_OPTIONS|MULTIPLE_OPTIONS|NUMERICAL",
+  "model": "opportunity|contact",
+  "parentId": "ID_DE_LA_CARPETA_PADRE",
+  "showInForms": true,
+  "options": [...] // para selects
+}
+```
 
-**Solución:**
-Crear en GHL Console (UI) que tiene los permisos necesarios.
+**Script disponible:**
+- Ubicación: `hub/criar-40-campos-carlos.js`
+- Pasos:
+  1. Crear 15 carpetas en GHL Console
+  2. Obtener IDs de carpetas
+  3. Actualizar `FOLDER_IDS` en el script
+  4. Ejecutar: `node criar-40-campos-carlos.js`
 
-**Ventajas de crear en UI:**
-- Asignar directamente a carpetas mientras se crean
-- Ver preview del campo inmediatamente
-- Configurar opciones avanzadas si es necesario
-- Validación en tiempo real de nombres/tipos
+**Ventajas de usar API vs UI:**
+- ✅ Automatizado (40 campos en segundos)
+- ✅ Reproducible
+- ✅ Sin errores manuales
+- ✅ Documentado en código
+
+**Referencia:**
+El patrón fue encontrado en: `src/setup/criar-campos-correto.js` (proyecto anterior Camila Brasileiro)
 
 ### Después de crear campos
 

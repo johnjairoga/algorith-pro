@@ -268,14 +268,27 @@ Resultado esperado:
 
 ### Por qué se crean manualmente en GHL
 
-1. **Limitación API v2.0:** Los endpoints de custom fields en GHL API v2.0 son **solo lectura** para la mayoría de casos (restricción IAM)
-2. **Alternativa desechada:** Intentar crear por API retorna 401/403
-3. **Solución:** Crear en GHL Console (UI) que tiene permisos completos
-4. **Ventaja:** La GUI permite:
-   - Asignar directamente a carpetas mientras se crean
-   - Ver preview del campo inmediatamente
-   - Configurar opciones avanzadas si es necesario
-   - Exportar a archivo después si se necesita
+**Limitación de API GHL:**
+- ✅ Endpoints de LECTURA: Disponibles en API v2.0 y v1
+- ❌ Endpoints de CREACIÓN: NO existen en ninguna versión de API de GHL
+- GHL no expone programáticamente la capacidad de crear custom fields
+
+**Esto es válido en:**
+- API v2.0 (nueva)
+- API v1 (anterior)
+- Todas las integraciones privadas
+
+**Razón técnica:**
+GHL reserva la creación de custom fields solo para GHL Console UI por razones de gobernanza y seguridad (permisos IAM administrativos).
+
+**Solución:**
+Crear en GHL Console (UI) que tiene los permisos necesarios.
+
+**Ventajas de crear en UI:**
+- Asignar directamente a carpetas mientras se crean
+- Ver preview del campo inmediatamente
+- Configurar opciones avanzadas si es necesario
+- Validación en tiempo real de nombres/tipos
 
 ### Después de crear campos
 

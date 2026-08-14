@@ -25,7 +25,25 @@
 
 ### Por qué no por API
 
-GHL API v2.0 NO permite crear custom fields (restricción de permisos IAM). Deben crearse manualmente en la GUI de GHL Console.
+**La contradicción que notaste es válida:**
+
+GHL ofrece endpoints para **LEER** custom fields (GET):
+```
+GET /locations/{locationId}/customFields?model=contact
+GET /locations/{locationId}/customFields?model=opportunity
+```
+
+Pero **NO ofrece endpoints para CREAR** custom fields (POST/PUT) en:
+- ✅ API v2.0 (más nueva)
+- ✅ API v1 (versiones anteriores)
+
+**Razón técnica:**
+- Lecturas: Endpoint público disponible
+- Creaciones: Solo en GHL Console UI (restricción de IAM / permisos de administrador)
+- GHL no expone la capacidad de crear custom fields programáticamente en ninguna versión de API
+
+**Conclusión:**
+Los campos pueden leerse por API (lo que hace el script) pero deben crearse manualmente en GHL Console por seguridad/gobernanza.
 
 ---
 

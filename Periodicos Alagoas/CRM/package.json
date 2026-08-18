@@ -8,7 +8,8 @@
     "dev": "node src/index.js",
     "setup:phase1": "node src/cli/setupPhase1.js",
     "setup:phase1-2": "node src/cli/setupPhase1Step2.js",
-    "setup:all": "node src/cli/setupComplete.js"
+    "setup:all": "node src/cli/setupComplete.js",
+    "rebuild:journey": "node src/cli/rebuildPipelinesJourney.js"
   },
   "keywords": [
     "ghl",

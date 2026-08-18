@@ -122,6 +122,38 @@ class GHLClient {
     }
   }
 
+  async deletePipeline(pipelineId) {
+    try {
+      await this.client.delete(`/opportunities/pipelines/${pipelineId}`);
+      console.log(`✅ Pipeline deletado: ${pipelineId}`);
+      return { success: true, id: pipelineId };
+    } catch (error) {
+      console.error(`❌ Erro ao deletar pipeline ${pipelineId}:`, error.response?.data || error.message);
+      throw error;
+    }
+  }
+
+  async getTags() {
+    try {
+      const response = await this.client.get(`/locations/${this.locationId}/tags`);
+      return response.data;
+    } catch (error) {
+      console.error('❌ Erro ao obter tags:', error.response?.data || error.message);
+      throw error;
+    }
+  }
+
+  async deleteTag(tagId) {
+    try {
+      await this.client.delete(`/locations/${this.locationId}/tags/${tagId}`);
+      console.log(`✅ Tag deletada: ${tagId}`);
+      return { success: true, id: tagId };
+    } catch (error) {
+      console.error(`❌ Erro ao deletar tag ${tagId}:`, error.response?.data || error.message);
+      throw error;
+    }
+  }
+
   async createContact(contactData) {
     try {
       const response = await this.client.post(

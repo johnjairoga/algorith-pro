@@ -188,7 +188,7 @@ Campo de Consentimiento:
 #### 1.5 - Crear Contacto de Prueba
 
 - [ ] Crear un contacto test: "Juan Prueba (Test)"
-- [ ] Email: test@triadeflow.com.br
+- [ ] Email: test@artificialctrl.com.br
 - [ ] WhatsApp: +55 82 98875-3884
 - [ ] Asignar a Pipeline REPD
 - [ ] Verificar que el contacto aparece en dashboard
@@ -628,7 +628,7 @@ Acción recomendada: Revisar en GHL y hacer follow-up según tipo de lead.
 ---
 ```
 
-**Destinatarios:** ronaldo.ferreira@ufal.edu.br + john@triadeflow.com.br
+**Destinatarios:** ronaldo.ferreira@ufal.edu.br + john@artificialctrl.com.br
 
 - [ ] Crear workflow en GHL
 - [ ] Nombre: "Automation: Notificación Interna → Email"
@@ -1027,7 +1027,7 @@ NEXT MONTH PLAN
 
 | Rol | Nombre | Email | WhatsApp | Disponibilidad |
 |-----|--------|-------|----------|-----------------|
-| **Lead Técnico** | John Jairo | john@triadeflow.com.br | +55 85 9XXXX-XXXX | Lun-Vie 8h-18h |
+| **Lead Técnico** | John Jairo | john@artificialctrl.com.br | +55 85 9XXXX-XXXX | Lun-Vie 8h-18h |
 | **Coordinador Cliente** | Ronaldo Ferreira | ronaldo.ferreira@ufal.edu.br | +55 82 9XXXX-XXXX | Lun-Vie 8h-17h |
 | **Soporte GHL** | [A designar] | support@ghl.com | - | 24/7 |
 

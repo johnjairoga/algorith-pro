@@ -1,0 +1,57 @@
+# Contratos y documentos legales
+**/Contrato*.md
+**/Contrato*.html
+**/Contrato*.docx
+**/contrato*.md
+**/contrato*.html
+**/contrato*.docx
+**/*contrato*.md
+**/*contrato*.html
+**/*contrato*.docx
+**/*Contrato*.md
+**/*Contrato*.html
+**/*Contrato*.docx
+
+# Archivos temporales y backups
+*.bak
+*.backup
+*.tmp
+*-backup/
+*-backup.*
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Archivos de configuración sensibles
+.env
+.env.local
+.env.*.local
+.env.old-backup
+.env.example-backup
+
+# Archivos IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Carpetas específicas de cliente
+Carlos Perlaza/
+Periodicos Alagoas/CRM/config-backup/
+Periodicos Alagoas/CRM/src-backup/
+Periodicos Alagoas/Imagnes/
+fbcontadores/
+
+# PDFs y reportes
+*.pdf

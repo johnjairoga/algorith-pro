@@ -145,31 +145,40 @@ META: 20+ leads/mes por revista (60+ total)
 
 ---
 
-## 🎯 ESTRUCTURA GHL (RESUMEN)
+## 🎯 ESTRUCTURA GHL (ACTUALIZADA 6 AGO 2026)
 
-### Tags Creados (9)
+### Tags Creados (8) — NUEVA ESTRUCTURA
 
-**Por Revista:**
+**Por Revista (3):**
 - `REPD` → Economia & Políticas Públicas
 - `REVISTA_CIENCIA_AGRICOLA` → Agronomía & Producción
 - `REVISTA_CRITICA_HISTORICA` → Historia & Humanidades
 
-**Por Cualificación:**
-- `LEAD_QUENTE` → Artículo listo → WhatsApp 1h
-- `LEAD_EDUCACIONAL` → Estudiante explorando → Email sequence 3d
-- `LEAD_PARCIAL` → Solo datos básicos
+**Por Timeline + Calificación (4) — Reemplaza LEAD_QUENTE/EDUCACIONAL/PARCIAL:**
+- `INTENT_30_DIAS` → Publicar nos próximos 30 dias (Alta urgência)
+- `INTENT_3_MESES` → Publicar nos próximos 3 meses (Urgência média)
+- `INTENT_6_MESES` → Publicar nos próximos 6 meses (Urgência baixa)
+- `INTENT_SIN_FECHA` → Sem data definida (Exploração)
 
-**Por Timeline:**
-- `INTENT_30_DIAS` → Próximos 30 días
-- `INTENT_3_MESES` → Próximos 3 meses
-- `INTENT_6_MESES` → Próximos 6 meses
-- `INTENT_SIN_FECHA` → Sin fecha definida
+**Por Origen/Origem (4) — Renombrado de lead-* a aluno-*:**
+- `aluno-landing-page` → Origen landing page
+- `aluno-meta-ads` → Origen Meta Ads
+- `aluno-google-ads` → Origen Google Ads
+- `aluno-importacao` → Importación manual
 
-### Pipelines Creados (3)
+### Pipelines Creados (3) — 5 ETAPAS NUEVA JORNADA DEL ALUNO
 
-- Pipeline REPD
-- Pipeline Revista Ciência Agrícola
-- Pipeline Revista Crítica Histórica
+**Estructura común para los 3 pipelines:**
+1. **Aluno Cadastrado** — Aluno preencheu o formulário do anúncio
+2. **Dados Confirmados** — Aluno recebeu mensagem confirmando os dados
+3. **Convite do Grupo Enviado** — Aluno recebeu convite para o grupo WhatsApp
+4. **No Grupo — Em Aquecimento** — Aluno dentro do grupo, sendo aquecido para submeter
+5. **Convertido — Artigo Submetido** — Aluno submeteu seu artigo à revista
+
+Cada pipeline aplica a los 3 temas:
+- Pipeline REPD — Economia & Políticas Públicas
+- Pipeline Revista Ciência Agrícola — Agronomía & Producción
+- Pipeline Revista Crítica Histórica — Historia & Humanidades
 
 ### Campos Personalizados (8)
 
@@ -184,14 +193,20 @@ META: 20+ leads/mes por revista (60+ total)
 
 ---
 
-## 🤖 AUTOMATIZACIONES (4 workflows)
+## 🤖 AUTOMATIZACIONES (6+ workflows) — REDISEÑADAS PARA NUEVA JORNADA
 
 | # | Nombre | Trigger | Delay | Acción |
 |---|--------|---------|-------|--------|
-| 1 | Lead Quente | Tag LEAD_QUENTE | 1h | WhatsApp personalizado |
-| 2 | Lead Educacional | Tag LEAD_EDUCACIONAL | 1d | Email Seq 3 días |
-| 3 | Bienvenida | Lead completado | 24h | WhatsApp por revista |
-| 4 | Notificación Interna | Lead completado | Inmediato | Email al equipo |
+| 1 | Aluno Cadastrado → Msg Bienvenida | Ingresa "Aluno Cadastrado" | 30 min | WhatsApp confirmación datos |
+| 2 | Alta Urgência → Invitación Prioritaria | Tag INTENT_30_DIAS | 1-2h | WhatsApp urgente |
+| 3 | Invitación a Grupo WhatsApp | Ingresa "Convite do Grupo Enviado" | Inmediato | Link WhatsApp por revista |
+| 4 | Secuencia de Aquecimiento | Ingresa "No Grupo — Em Aquecimento" | Diario | Dicas + históricos + checklist |
+| 5 | Notificación Interna | Nuevo aluno completado | Inmediato | Email al equipo UFAL |
+| 6 | Recordatorio de Submisión | 2d antes vencimiento INTENT_* | -2d | WhatsApp recordatorio |
+
+**Cambio clave:** Las automatizaciones anteriores basadas en LEAD_QUENTE/EDUCACIONAL/PARCIAL han sido reemplazadas por un sistema que se alinea con:
+- **Pipeline stages** (etapas específicas de la jornada)
+- **INTENT_* tags** (urgencia real = timeline de publicación)
 
 ---
 
@@ -238,7 +253,7 @@ META: 20+ leads/mes por revista (60+ total)
 
 | Rol | Nombre | Email | WhatsApp |
 |-----|--------|-------|----------|
-| **Lead Técnico** | John Jairo | john@triadeflow.com.br | +55 85 9XXXX-XXXX |
+| **Lead Técnico** | John Jairo | john@artificialctrl.com.br | +55 85 9XXXX-XXXX |
 | **Coordinador** | Ronaldo Ferreira | ronaldo.ferreira@ufal.edu.br | +55 82 9XXXX-XXXX |
 
 ---

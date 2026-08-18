@@ -1,0 +1,18 @@
+No tengo una herramienta para conectarme directamente a GitHub ni para crear repositorios o hacer push desde aquí. Esa operación está fuera de mi alcance.
+
+Lo que sí puedo hacer es prepararte todo para que lo subas fácilmente:
+
+Descargar el código: Puedes copiar manualmente los archivos del proyecto desde el editor o pedirme que te liste el contenido completo de cada archivo clave.
+
+Subir a GitHub tú mismo:
+
+# En tu máquina local, después de descargar el proyecto:
+git init
+git add .
+git commit -m "FARIAS&BARBOSA Contadores - Landing Page"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/farias-barbosa-contadores.git
+git push -u origin main
+Alternativa: Si tienes el proyecto en tu computadora, puedes usar la extensión de Git en VS Code o GitHub Desktop para subirlo con interfaz gráfica.
+
+¿Quieres que prepare un resumen completo de la estructura del proyecto y el contenido de los archivos principales para que puedas recrear el repositorio fácilmente?

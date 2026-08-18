@@ -282,7 +282,7 @@ DÍAS RESTANTES: 21 días
 
 | Contacto | Rol | Email | WhatsApp | Disponibilidad |
 |----------|-----|-------|----------|---|
-| John | Lead Técnico | john@triadeflow.com.br | +55 85 9XXXX-XXXX | Lun-Vie 8h-18h |
+| John | Lead Técnico | john@artificialctrl.com.br | +55 85 9XXXX-XXXX | Lun-Vie 8h-18h |
 | Ronaldo | Coordinador UFAL | ronaldo.ferreira@ufal.edu.br | +55 82 9XXXX-XXXX | Lun-Vie 8h-17h |
 
 ---

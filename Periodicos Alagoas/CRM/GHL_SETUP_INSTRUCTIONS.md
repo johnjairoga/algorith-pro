@@ -320,7 +320,7 @@ Una vez que la Fase 1 está completada:
 
 2. **Crear contacto de prueba**
    - Nombre: "Juan Prueba"
-   - Email: test@triadeflow.com.br
+   - Email: test@artificialctrl.com.br
    - Verificar que se asignan tags correctamente
 
 3. **Validar API**
@@ -339,7 +339,7 @@ Si tienes problemas:
 1. Revisar sección **Troubleshooting** arriba
 2. Verificar que `.env` tiene credenciales correctas
 3. Verificar que Node.js está instalado (`node --version`)
-4. Contactar a John: john@triadeflow.com.br
+4. Contactar a John: john@artificialctrl.com.br
 
 ---
 

@@ -29,26 +29,26 @@ const campos = [
   {
     name: 'Valor Restante a Pagar',
     fieldKey: 'valor_restante_a_pagar',
-    objectKey: 'custom_object.opportunity',
-    dataType: 'CURRENCY',
+    dataType: 'NUMERICAL',
     description: 'Saldo pendiente de pago de la oportunidad',
-    showInForms: true
+    showInForms: true,
+    model: 'opportunity'
   },
   {
     name: 'Valor Fechado',
     fieldKey: 'valor_fechado',
-    objectKey: 'opportunity',
-    dataType: 'CURRENCY',
+    dataType: 'NUMERICAL',
     description: 'Valor total cerrado de la oportunidad',
-    showInForms: true
+    showInForms: true,
+    model: 'opportunity'
   },
   {
     name: 'Valor do Lead',
     fieldKey: 'valor_do_lead',
-    objectKey: 'opportunity',
-    dataType: 'CURRENCY',
+    dataType: 'NUMERICAL',
     description: 'Valor inicial o estimado del lead',
-    showInForms: true
+    showInForms: true,
+    model: 'opportunity'
   },
 
   // OPORTUNIDADES - FECHAS Y PROGRAMACIÓN

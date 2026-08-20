@@ -16,42 +16,44 @@ const pitToken = process.env.GHL_PIT_TOKEN;
 const headers = {
   'Authorization': `Bearer ${pitToken}`,
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'Version': '2021-07-28'
 };
 
-// Carpetas a crear
+// Carpetas a crear (10 total para proyecto Carlos Perlaza)
 const carpetas = {
   opportunities: [
-    { name: 'Financiero', objectKey: 'opportunity' },
-    { name: 'Fechas y Programación', objectKey: 'opportunity' },
-    { name: 'Origen y Tracking', objectKey: 'opportunity' },
-    { name: 'Productos y Servicios', objectKey: 'opportunity' },
-    { name: 'Métodos de Pago', objectKey: 'opportunity' },
-    { name: 'Consulta y Atendimiento', objectKey: 'opportunity' },
-    { name: 'Equipo y Responsables', objectKey: 'opportunity' },
-    { name: 'Pérdida y Análisis', objectKey: 'opportunity' }
+    { name: 'Financiero', objectKey: 'custom_object.opportunity', key: 'financiero' },
+    { name: 'Fechas y Programación', objectKey: 'custom_object.opportunity', key: 'fechas' },
+    { name: 'Origen y Tracking', objectKey: 'custom_object.opportunity', key: 'origen' },
+    { name: 'Productos y Servicios', objectKey: 'custom_object.opportunity', key: 'productos' },
+    { name: 'Métodos de Pago', objectKey: 'custom_object.opportunity', key: 'metodos_pago' },
+    { name: 'Consulta y Atendimiento', objectKey: 'custom_object.opportunity', key: 'consulta' },
+    { name: 'Equipo y Responsables', objectKey: 'custom_object.opportunity', key: 'equipo' },
+    { name: 'Pérdida y Análisis', objectKey: 'custom_object.opportunity', key: 'perdida' }
   ],
   contacts: [
-    { name: 'Oportunidades Abiertas', objectKey: 'contact' },
-    { name: 'Seguimiento y Control', objectKey: 'contact' },
-    { name: 'Información de Empresa', objectKey: 'contact' },
-    { name: 'Dirección y Ubicación', objectKey: 'contact' },
-    { name: 'Datos Personales', objectKey: 'contact' },
-    { name: 'Clasificación', objectKey: 'contact' }
+    { name: 'Oportunidades Abiertas', objectKey: 'custom_object.contact', key: 'oportunidades_abiertas' },
+    { name: 'Seguimiento y Control', objectKey: 'custom_object.contact', key: 'seguimiento' }
   ]
 };
 
 async function crearCarpetas() {
-  console.log('\n🔨 CREANDO CARPETAS DE CUSTOM FIELDS EN GHL\n');
-  console.log('═'.repeat(70));
+  console.log('\n');
+  console.log('█████████████████████████████████████████████████████');
+  console.log('█                                                   █');
+  console.log('█  🚀 CREAR: 10 Carpetas Personalizadas Carlos      █');
+  console.log('█                                                   █');
+  console.log('█████████████████████████████████████████████████████\n');
 
   const todas = [...carpetas.opportunities, ...carpetas.contacts];
+  const carpetasCreadas = {};
   let exitosas = 0;
   let fallidas = 0;
 
   for (const carpeta of todas) {
     try {
-      console.log(`\n📁 Creando: ${carpeta.name} (${carpeta.objectKey})`);
+      console.log(`📁 Creando: ${carpeta.name} (${carpeta.objectKey})`);
 
       const payload = {
         objectKey: carpeta.objectKey,
@@ -59,51 +61,44 @@ async function crearCarpetas() {
         locationId: locationId
       };
 
-      console.log(`   Payload: ${JSON.stringify(payload)}`);
-
       const response = await axios.post(
         'https://services.leadconnectorhq.com/custom-fields/folder',
         payload,
         { headers }
       );
 
-      console.log(`   ✅ ÉXITO`);
-      console.log(`   ID: ${response.data?.id || 'N/A'}`);
-      console.log(`   Status: ${response.status}`);
+      const folderId = response.data?.id || response.data?._id;
+      console.log(`   ✅ ID: ${folderId}\n`);
+
+      carpetasCreadas[carpeta.key] = folderId;
       exitosas++;
 
     } catch (error) {
-      console.log(`   ❌ ERROR`);
-      console.log(`   Status: ${error.response?.status}`);
-      console.log(`   Mensaje: ${error.response?.data?.message || error.message}`);
+      console.log(`   ❌ Error: ${error.response?.data?.message || error.message}\n`);
       fallidas++;
 
-      // Si es error 401, probablemente sea el token
       if (error.response?.status === 401) {
-        console.log(`   💡 Consejo: Verifica que el token GHL_PIT_TOKEN sea válido`);
-      }
-
-      // Si es error 404, probablemente el endpoint no existe con ese objectKey
-      if (error.response?.status === 404) {
-        console.log(`   💡 Consejo: El objectKey podría ser incorrecto`);
-        console.log(`   💡 Intenta con: custom_object.contact o solo contact`);
+        console.log(`   💡 Verifica que GHL_PIT_TOKEN sea válido\n`);
       }
     }
   }
 
-  console.log('\n═'.repeat(70));
-  console.log(`\n📊 RESUMEN`);
-  console.log(`✅ Exitosas: ${exitosas}`);
-  console.log(`❌ Fallidas: ${fallidas}`);
-  console.log(`Total: ${todas.length}`);
-  console.log(`\n`);
+  console.log('═══════════════════════════════════════════════════════\n');
+  console.log('📊 RESUMEN FINAL\n');
+  console.log(`✅ Exitosas: ${exitosas}/10`);
+  console.log(`❌ Fallidas: ${fallidas}/10\n`);
 
-  if (fallidas > 0) {
-    console.log('⚠️  NOTA: Si todas fallaron, el endpoint podría requerir:');
-    console.log('   - objectKey diferente: custom_object.contact, custom_object.opportunity');
-    console.log('   - O usar un endpoint completamente diferente');
-    console.log('   - Verificar documentación de GHL API');
+  if (exitosas > 0) {
+    console.log('📋 IDs de carpetas creadas:\n');
+    console.log(JSON.stringify(carpetasCreadas, null, 2));
+    console.log('\n✅ Guarda estos IDs para usar en crear-40-campos-carlos.js\n');
   }
+
+  if (fallidas === 0 && exitosas === 10) {
+    console.log('✅ ¡TODAS LAS 10 CARPETAS CREADAS EXITOSAMENTE!\n');
+  }
+
+  console.log('═══════════════════════════════════════════════════════\n');
 
   process.exit(fallidas > 0 ? 1 : 0);
 }

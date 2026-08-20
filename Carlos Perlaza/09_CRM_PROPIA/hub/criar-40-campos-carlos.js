@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Script para crear los 40 campos personalizados para Carlos Perlaza
+ * Script para crear los 39 campos personalizados para Carlos Perlaza
  * Basado en endpoint funcional probado: POST /locations/{locationId}/customFields
  *
  * NOTA: Requiere que las 15 carpetas ya estén creadas en GHL
  * y sus IDs deben ser ingresados en este script
+ *
+ * CAMPOS REMOVIDOS: Cantidad de Follow-ups (se automatizará con workflows)
  */
 
 import axios from 'axios';
@@ -69,7 +71,7 @@ const CAMPOS_A_CREAR = [
 
   // Fechas y Programación (6)
   {
-    displayName: 'Previsão da Data de Fechamiento Esperada',
+    displayName: 'Fecha Esperada de Cierre',
     dataType: 'DATE',
     type: 'date',
     description: 'Fecha estimada de cierre de la oportunidad',
@@ -78,7 +80,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Data Pagamento',
+    displayName: 'Fecha de Pago',
     dataType: 'DATE',
     type: 'date',
     description: 'Fecha del pago realizado',
@@ -87,7 +89,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Data Fim Programa',
+    displayName: 'Fecha Fin del Programa',
     dataType: 'DATE',
     type: 'date',
     description: 'Fecha de finalización del programa',
@@ -96,7 +98,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Data Inicio Programa',
+    displayName: 'Fecha Inicio del Programa',
     dataType: 'DATE',
     type: 'date',
     description: 'Fecha de inicio del programa',
@@ -105,7 +107,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Período da Data de Tratamiento Esperado',
+    displayName: 'Período Esperado de Tratamiento',
     dataType: 'DATE',
     type: 'date',
     description: 'Período esperado de tratamiento',
@@ -114,7 +116,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Data Agendamiento',
+    displayName: 'Fecha de Agendamiento',
     dataType: 'DATE',
     type: 'date',
     description: 'Fecha del agendamiento',
@@ -135,7 +137,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Fonte da Oportunidade',
+    displayName: 'Fuente de la Oportunidad',
     dataType: 'TEXT',
     type: 'text',
     description: 'Fuente de la oportunidad',
@@ -193,7 +195,7 @@ const CAMPOS_A_CREAR = [
 
   // Productos y Servicios (3)
   {
-    displayName: 'Produtos Adquiridos',
+    displayName: 'Productos Adquiridos',
     dataType: 'MULTIPLE_OPTIONS',
     type: 'select',
     description: 'Productos adquiridos',
@@ -225,7 +227,7 @@ const CAMPOS_A_CREAR = [
 
   // Métodos de Pago (2)
   {
-    displayName: 'Forma de Pagamento',
+    displayName: 'Forma de Pago',
     dataType: 'SINGLE_OPTIONS',
     type: 'select',
     description: 'Forma de pago',
@@ -247,7 +249,7 @@ const CAMPOS_A_CREAR = [
 
   // Consulta y Atendimiento (5)
   {
-    displayName: 'Día da Semana Consulta',
+    displayName: 'Día de la Semana de la Consulta',
     dataType: 'SINGLE_OPTIONS',
     type: 'select',
     description: 'Día de la semana de la consulta',
@@ -257,7 +259,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Horário da Consulta',
+    displayName: 'Hora de la Consulta',
     dataType: 'TEXT',
     type: 'text',
     description: 'Hora de la consulta',
@@ -266,7 +268,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Número da Consulta',
+    displayName: 'Número de la Consulta',
     dataType: 'MULTIPLE_OPTIONS',
     type: 'select',
     description: 'Número de consulta',
@@ -276,7 +278,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Canal Consulta',
+    displayName: 'Canal de la Consulta',
     dataType: 'SINGLE_OPTIONS',
     type: 'select',
     description: 'Canal de consulta',
@@ -286,7 +288,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Día para Envio do Checkin',
+    displayName: 'Día para Envío del Checkin',
     dataType: 'SINGLE_OPTIONS',
     type: 'select',
     description: 'Día para envío del checkin',
@@ -298,7 +300,7 @@ const CAMPOS_A_CREAR = [
 
   // Equipo y Responsables (3)
   {
-    displayName: 'Vendedor Responsável',
+    displayName: 'Vendedor Responsable',
     dataType: 'TEXT',
     type: 'text',
     description: 'Vendedor responsable',
@@ -307,7 +309,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Propriedário',
+    displayName: 'Propietario',
     dataType: 'TEXT',
     type: 'text',
     description: 'Propietario/asignado a',
@@ -316,7 +318,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Médico de Perda',
+    displayName: 'Médico de la Pérdida',
     dataType: 'TEXT',
     type: 'text',
     description: 'Médico responsable en caso de pérdida',
@@ -327,7 +329,7 @@ const CAMPOS_A_CREAR = [
 
   // Pérdida y Análisis (2)
   {
-    displayName: 'Motivo de Perda',
+    displayName: 'Motivo de la Pérdida',
     dataType: 'SINGLE_OPTIONS',
     type: 'select',
     description: 'Motivo por el cual se perdió',
@@ -337,7 +339,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Probabilidade de Previsão',
+    displayName: 'Probabilidad de Previsión',
     dataType: 'NUMERICAL',
     type: 'number',
     description: 'Probabilidad de previsión (%)',
@@ -390,16 +392,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
 
-  // Seguimiento y Control (5)
-  {
-    displayName: 'Cantidad de Follow-ups',
-    dataType: 'NUMERICAL',
-    type: 'number',
-    description: 'Cantidad de follow-ups realizados',
-    model: 'contact',
-    parentId: FOLDER_IDS.seguimiento,
-    showInForms: true
-  },
+  // Seguimiento y Control (4)
   {
     displayName: 'Próximo Retorno Estimado',
     dataType: 'DATE',
@@ -419,7 +412,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Origen do Lead',
+    displayName: 'Origen del Lead',
     dataType: 'SINGLE_OPTIONS',
     type: 'select',
     description: 'Origen del lead',
@@ -429,7 +422,7 @@ const CAMPOS_A_CREAR = [
     showInForms: true
   },
   {
-    displayName: 'Data Entrada',
+    displayName: 'Fecha de Entrada',
     dataType: 'DATE',
     type: 'date',
     description: 'Fecha de entrada al sistema',
@@ -443,7 +436,7 @@ async function criarCampos() {
   console.log('\n');
   console.log('█████████████████████████████████████████████████████');
   console.log('█                                                   █');
-  console.log('█  🚀 CREAR: 40 Campos Personalizados Carlos Perlaza █');
+  console.log('█  🚀 CREAR: 39 Campos Personalizados Carlos Perlaza █');
   console.log('█                                                   █');
   console.log('█████████████████████████████████████████████████████\n');
 
@@ -538,7 +531,7 @@ async function criarCampos() {
   console.log('═══════════════════════════════════════════════════════\n');
   console.log('📊 RESUMEN FINAL\n');
 
-  console.log(`✅ Exitosos: ${resultados.exitosos.length}/40`);
+  console.log(`✅ Exitosos: ${resultados.exitosos.length}/39`);
   if (resultados.exitosos.length > 0 && resultados.exitosos.length <= 20) {
     resultados.exitosos.forEach(c => {
       console.log(`   ✅ ${c.nombre} (${c.model})`);
@@ -558,7 +551,7 @@ async function criarCampos() {
   console.log('═══════════════════════════════════════════════════════\n');
 
   if (resultados.errores.length === 0) {
-    console.log('✅ ¡TODOS LOS 40 CAMPOS CREADOS EXITOSAMENTE!\n');
+    console.log('✅ ¡TODOS LOS 39 CAMPOS CREADOS EXITOSAMENTE!\n');
     process.exit(0);
   } else {
     console.log(`⚠️  ${resultados.errores.length} campos con error\n`);

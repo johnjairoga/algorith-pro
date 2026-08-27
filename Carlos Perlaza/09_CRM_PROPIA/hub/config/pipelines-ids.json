@@ -1,0 +1,49 @@
+{
+  "fecha_verificacion": "2026-08-20",
+  "nota": "Pipelines creadas manualmente en GHL Console - IDs pendientes de obtener via API",
+  "ubicacion": "1nQ7RropfSamHsRQbK8R",
+  "pipelines": [
+    {
+      "nombre": "CONSULTA INICIAL",
+      "descripcion": "Conversión de leads en pacientes (tratamientos generales)",
+      "stages_verificados": [
+        {
+          "nombre": "LEAD CUALIFICADO",
+          "descripcion": "Secretaria valida interés y capacidad de pago"
+        },
+        {
+          "nombre": "CITA AGENDADA",
+          "descripcion": "Paciente selecciona fecha/hora en calendario"
+        },
+        {
+          "nombre": "CONSULTA REALIZADA",
+          "descripcion": "Doctor completa consulta y genera notas médicas"
+        },
+        {
+          "nombre": "CONVERTIDO",
+          "descripcion": "Paciente contrata servicios"
+        },
+        {
+          "nombre": "PERDIDO",
+          "descripcion": "Paciente no contrató - se mueve a Inactivos"
+        }
+      ]
+    },
+    {
+      "nombre": "APARATOLOGÍA",
+      "descripcion": "Gestión de sesiones con máquinas láser (21 máquinas)",
+      "estado": "CREADA EN GHL CONSOLE"
+    },
+    {
+      "nombre": "RECURRENCIA",
+      "descripcion": "Ciclos periódicos (30d, 60d, 90d, trimestral, semestral)",
+      "estado": "CREADA EN GHL CONSOLE"
+    },
+    {
+      "nombre": "INACTIVOS",
+      "descripcion": "Pacientes sin contacto >30 días + estrategias de re-engagement",
+      "estado": "CREADA EN GHL CONSOLE"
+    }
+  ],
+  "siguiente_paso": "Mapear campos personalizados a stages de cada pipeline"
+}

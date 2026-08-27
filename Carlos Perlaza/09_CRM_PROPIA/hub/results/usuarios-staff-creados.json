@@ -1,0 +1,31 @@
+{
+  "success": [
+    "Dra. Anja Arellano M.",
+    "Dr. Aristides Arellano Huacuja",
+    "Dra. Dafne Arellano Montalvo"
+  ],
+  "failed": [],
+  "byMedico": {
+    "Dra. Anja Arellano M.": {
+      "status": "success",
+      "user_id": "JYSG5dACWmGYUGm4Wg5t",
+      "staff_id": "JYSG5dACWmGYUGm4Wg5t",
+      "email": "anja.arellano@clinicapuebla.com"
+    },
+    "Dr. Aristides Arellano Huacuja": {
+      "status": "success",
+      "user_id": "sgFIbd7atepBr4mBfbkn",
+      "staff_id": "sgFIbd7atepBr4mBfbkn",
+      "email": "aristides.arellano@clinicapuebla.com"
+    },
+    "Dra. Dafne Arellano Montalvo": {
+      "status": "success",
+      "user_id": "WPleSzuP5vPp0WlQ7u3a",
+      "staff_id": "WPleSzuP5vPp0WlQ7u3a",
+      "email": "dafne.arellano@clinicapuebla.com"
+    }
+  },
+  "startTime": "2026-08-27T03:42:37.095Z",
+  "endTime": "2026-08-27T03:42:42.634Z",
+  "duration": 5.539
+}

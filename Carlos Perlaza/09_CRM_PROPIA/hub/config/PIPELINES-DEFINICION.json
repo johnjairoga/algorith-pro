@@ -1,0 +1,357 @@
+{
+  "ubicacion": "Clínica Dermatológica Puebla",
+  "locationId": "1nQ7RropfSamHsRQbK8R",
+  "fecha": "2026-08-14",
+  "nota": "Estos pipelines deben crearse MANUALMENTE en GHL Console (Settings → Pipelines). La API v2.0 no permite crear pipelines automáticamente por razones de seguridad.",
+  "pipelines": [
+    {
+      "numero": 1,
+      "nombre": "CONSULTA INICIAL",
+      "descripcion": "Conversión de leads en pacientes (tratamientos generales)",
+      "emoji": "📋",
+      "color": "#3498db",
+      "duracionTipica": "1-7 días",
+      "valorTipico": "$150-$300 MXN",
+      "etapas": [
+        {
+          "numero": 1,
+          "nombre": "LEAD CAPTURADO",
+          "descripcion": "Lead llega por formulario web, WhatsApp o Instagram",
+          "acciones_automaticas": [
+            "Bienvenida por WhatsApp (5 min después)",
+            "Enviar catálogo de servicios (1h después)"
+          ],
+          "tareas_manuales": [
+            "Secretaria llama en <2 horas"
+          ],
+          "tags": [
+            "Lead_Capturado",
+            "No_Contactado"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "LEAD CUALIFICADO",
+          "descripcion": "Secretaria valida interés y capacidad de pago",
+          "acciones_automaticas": [
+            "Enviar opciones de cita disponibles",
+            "Enviar link de pago para reserva (opcional)"
+          ],
+          "tareas_manuales": [
+            "Secretaria registra notas de llamada"
+          ],
+          "tags": [
+            "Lead_Cualificado",
+            "Servicio_[X]"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "CITA AGENDADA",
+          "descripcion": "Paciente selecciona fecha/hora en calendario",
+          "acciones_automaticas": [
+            "Confirmación por WhatsApp",
+            "Instrucciones pre-consulta",
+            "Recordatorio 24h antes",
+            "Recordatorio 8h antes",
+            "Recordatorio 4h antes",
+            "Recordatorio 1h antes",
+            "Recordatorio 15 min antes",
+            "Recordatorio 5 min antes"
+          ],
+          "tareas_manuales": [
+            "Preparar expediente médico"
+          ],
+          "tags": [
+            "Cita_Agendada",
+            "Pre_Consulta"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "CONSULTA REALIZADA",
+          "descripcion": "Doctor completa consulta y genera notas médicas",
+          "acciones_automaticas": [
+            "Enviar notas de consulta por email",
+            "Enviar opciones de tratamientos",
+            "Formulario médico (historial/ayuda técnica)"
+          ],
+          "tareas_manuales": [
+            "Seguimiento para próximo paso"
+          ],
+          "tags": [
+            "Consulta_Realizada",
+            "Pendiente_Conversion"
+          ]
+        },
+        {
+          "numero": 5,
+          "nombre": "CONVERTIDO",
+          "descripcion": "Paciente contrata servicios",
+          "acciones_automaticas": [
+            "Move a Pipeline correspondiente (Aparatología, Recurrencia)",
+            "Crear orden de pago"
+          ],
+          "tareas_manuales": [
+            "Confirmación de contratación"
+          ],
+          "tags": [
+            "Pagó",
+            "Cliente_Activo"
+          ]
+        },
+        {
+          "numero": 6,
+          "nombre": "PERDIDO",
+          "descripcion": "Paciente no contrató - se mueve a Inactivos",
+          "acciones_automaticas": [
+            "Move a Pipeline 3 (Inactivos) después 30 días"
+          ],
+          "tareas_manuales": [
+            "Registrar motivo de pérdida"
+          ],
+          "tags": [
+            "No_Convertido",
+            "Inactivo"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "nombre": "APARATOLOGÍA",
+      "descripcion": "Gestión de sesiones con máquinas láser (21 máquinas)",
+      "emoji": "💡",
+      "color": "#e74c3c",
+      "duracionTipica": "30-120 días",
+      "valorTipico": "$300-$2,000 MXN por sesión",
+      "etapas": [
+        {
+          "numero": 1,
+          "nombre": "CONSULTA / EVALUACIÓN",
+          "descripcion": "Lead interesado en máquina láser específica",
+          "acciones_automaticas": [
+            "Enviar galería antes/después de la máquina",
+            "Enviar plan típico de sesiones",
+            "Enviar pricing (sesión vs paquete)"
+          ],
+          "tareas_manuales": [
+            "Agendar consulta con especialista"
+          ],
+          "tags": [
+            "Aparatologia_Consulta",
+            "Maquina_[Tipo]"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "CANDIDATO APROBADO",
+          "descripcion": "Doctor evalúa en consulta y aprueba candidatura",
+          "acciones_automaticas": [
+            "Enviar plan personalizado",
+            "Cuidados pre-tratamiento (24h antes)",
+            "Ofrecer paquete con descuento"
+          ],
+          "tareas_manuales": [
+            "Validar comprensión del paciente"
+          ],
+          "tags": [
+            "Candidato_Aprobado",
+            "Listo_Primera_Sesion"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "PRIMERA SESIÓN",
+          "descripcion": "Paciente paga primera sesión y se atiende",
+          "acciones_automaticas": [
+            "Confirmación de cita",
+            "Instrucciones post-tratamiento (protector solar)",
+            "Encuesta post-sesión (24h después)"
+          ],
+          "tareas_manuales": [
+            "Monitoreo durante tratamiento"
+          ],
+          "tags": [
+            "Primera_Sesion",
+            "En_Tratamiento"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "SESIONES 2-X",
+          "descripcion": "Sesiones en progreso (ciclo de tratamiento)",
+          "acciones_automaticas": [
+            "Recordatorio próxima sesión (7-10 días)",
+            "Cuidados post-sesión específicos",
+            "Foto de progreso (si autoriza)"
+          ],
+          "tareas_manuales": [
+            "Evaluar si ajustar parámetros"
+          ],
+          "tags": [
+            "Sesion_[Numero]",
+            "Progreso_Visible"
+          ]
+        },
+        {
+          "numero": 5,
+          "nombre": "CICLO COMPLETADO",
+          "descripcion": "Paciente completó todas las sesiones del plan",
+          "acciones_automaticas": [
+            "Enviar galería de resultados",
+            "Encuesta de satisfacción completa",
+            "Ofrecer sesiones de mantenimiento",
+            "Ofrecer otros tratamientos complementarios"
+          ],
+          "tareas_manuales": [
+            "Archivar resultados para portfolio"
+          ],
+          "tags": [
+            "Ciclo_Completado",
+            "Listo_Mantenimiento"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "nombre": "INACTIVOS + REACTIVACIÓN",
+      "descripcion": "Pacientes sin contacto >30 días + estrategias de re-engagement",
+      "emoji": "🔄",
+      "color": "#f39c12",
+      "duracionTipica": "30-60 días",
+      "valorTipico": "$500-$2,000 MXN",
+      "etapas": [
+        {
+          "numero": 1,
+          "nombre": "INACTIVO DETECTADO",
+          "descripcion": "Sistema detecta automáticamente >30 días sin contacto",
+          "acciones_automaticas": [
+            "Mensaje 'Te extrañamos!' (automático)",
+            "Encuesta: ¿Cómo te fue con tratamiento?",
+            "Fotos inspiradoras de nuevos tratamientos"
+          ],
+          "tareas_manuales": [
+            "Secretaria clasifica razón de inactividad"
+          ],
+          "tags": [
+            "Inactivo_30dias",
+            "Pendiente_Contacto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "RAZÓN IDENTIFICADA",
+          "descripcion": "Se determina por qué el paciente desapareció",
+          "acciones_automaticas": [
+            "Oferta personalizada según razón",
+            "Descuento de reactivación (15-25%)",
+            "Envío de plan de mantenimiento"
+          ],
+          "tareas_manuales": [
+            "Follow-up en 3-5 días si no responde"
+          ],
+          "tags": [
+            "Razon_[X]",
+            "Oferta_Enviada"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "REACTIVADO / PERDIDO",
+          "descripcion": "Paciente regresa o se archiva permanentemente",
+          "acciones_automaticas": [
+            "Si reactivado: Move a pipeline correspondiente",
+            "Si perdido: Move a Archivo"
+          ],
+          "tareas_manuales": [
+            "Registrar motivo final"
+          ],
+          "tags": [
+            "Reactivado_[Fecha]",
+            "Perdido_Permanente"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "nombre": "RECURRENCIA",
+      "descripcion": "Ciclos periódicos (30d, 60d, 90d, trimestral, semestral)",
+      "emoji": "🔁",
+      "color": "#27ae60",
+      "duracionTipica": "Recurrente (indefinido)",
+      "valorTipico": "$1,000-$3,000 MXN/mes",
+      "etapas": [
+        {
+          "numero": 1,
+          "nombre": "EN RECURRENCIA",
+          "descripcion": "Paciente en ciclo activo (30/60/90d/trimestral/semestral)",
+          "acciones_automaticas": [
+            "Recordatorio X días antes (configurable por ciclo)",
+            "Confirmación de cita 48h antes",
+            "Instrucciones pre-tratamiento",
+            "Recordatorios automáticos (24h, 1h, 15min)"
+          ],
+          "tareas_manuales": [
+            "Secretaria confirma si sigue/cambia ciclo"
+          ],
+          "tags": [
+            "Recurrencia_[Ciclo]",
+            "Cliente_VIP",
+            "Activo"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "SESIÓN COMPLETADA",
+          "descripcion": "Doctor completa tratamiento recurrente",
+          "acciones_automaticas": [
+            "Cálculo automático de próxima fecha",
+            "Crear nuevo evento en el ciclo",
+            "Encuesta de satisfacción",
+            "Vuelve a Etapa 1 (loop)"
+          ],
+          "tareas_manuales": [
+            "Evaluar si cambiar ciclo o pausar"
+          ],
+          "tags": [
+            "Sesion_Completada_[Fecha]",
+            "Proximo_[Fecha]"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "PAUSADO / CANCELADO",
+          "descripcion": "Paciente pausa o cancela permanentemente",
+          "acciones_automaticas": [
+            "Move a Pipeline 3 (Inactivos)",
+            "Mensaje de confirmación"
+          ],
+          "tareas_manuales": [
+            "Registrar motivo de pausa"
+          ],
+          "tags": [
+            "Pausado_[Motivo]",
+            "Potencial_Reactivacion"
+          ]
+        }
+      ]
+    }
+  ],
+  "instrucciones_creacion": {
+    "paso1": "Ir a GHL Console → Configuración → Pipelines",
+    "paso2": "Hacer clic en '+ Nuevo Pipeline'",
+    "paso3": "Ingresar nombre del pipeline (copiar exacto del archivo)",
+    "paso4": "Agregaar etapas manualmente en el orden especificado",
+    "paso5": "Guardar y repetir para los 4 pipelines",
+    "duracion_estimada": "15-20 minutos para los 4 pipelines"
+  },
+  "notas_importantes": [
+    "Los pipelines DEBEN crearse manualmente en GHL porque la API v2.0 no permite crear programáticamente",
+    "Los nombres de etapas deben ser exactos (sin mayúsculas/minúsculas adicionales)",
+    "Las automaciones se configurarán DESPUÉS en GHL Workflows",
+    "Los tags deben crearse también en GHL antes de usarlos en automaciones"
+  ]
+}

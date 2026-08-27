@@ -1,0 +1,133 @@
+================================================================================
+                   ESTRUCTURA FINAL - CARLOS PERLAZA
+================================================================================
+
+Carlos Perlaza/
+│
+├─ 📋 00_INICIO/
+│  ├─ INDEX.md                          ← EMPIEZA AQUÍ
+│  ├─ README.md                         (resumen proyecto)
+│  ├─ QUICK_REFERENCE.md                (referencia rápida)
+│  ├─ _CHECKLIST_PROYECTO.md            (estado general)
+│  └─ ESTRUCTURA_CARPETAS_PROPUESTA.md  (documentación)
+│
+├─ ⚖️  01_CONTRATO_Y_LEGAL/
+│  ├─ Contrato_Prestacion_Servicios_Automatizacion_Carlos_Perlaza.md
+│  ├─ CONTRATO_FINAL_FIRMADO.pdf
+│  ├─ [Otros contratos PDF]
+│  └─ Historial_Versiones/
+│     ├─ v1.docx
+│     ├─ v2_COMPLETO.docx
+│     ├─ v_Ediciones.docx
+│     └─ [versiones previas]
+│
+├─ 🚀 02_ONBOARDING/
+│  ├─ FORM_RECOLECCION_INFO_CLINICA.md  ← LLEVAR MIÉRCOLES
+│  ├─ Modificaciones - Onboarding 01 12-08-2026.docx
+│  ├─ TEMPLATE_EMAIL_PARA_CARLOS.txt
+│  └─ [otros documentos de reunión]
+│
+├─ 📐 03_ESPECIFICACION_TECNICA/
+│  │
+│  ├─ Flujos/
+│  │  └─ FLUJOS_PROCESOS_SISTEMA_GHL.md
+│  │     (7 flujos: Agendamiento, Historiales, Comunicación, etc.)
+│  │
+│  ├─ Pipelines/
+│  │  ├─ PIPELINES_GHL_DETALLADOS.md    (8 pipelines overview)
+│  │  ├─ SUBETAPAS_DETALLADAS_TODOS_PIPELINES.md ← MAESTRO (41 etapas)
+│  │  ├─ PIPELINE_CIRUGIA_DETALLADA_FLUJO_COMPLETO.md
+│  │  └─ [otros pipelines]
+│  │
+│  └─ Automations/
+│     └─ [Automations por pipeline - futuro]
+│
+├─ 🏥 04_INFORMACION_CLINICA/
+│  ├─ Clinica_Dermatologica_Puebla_SUMMARY.md
+│  ├─ Servicios_Ofrecidos.md
+│  ├─ Doctores_Especialidades.md
+│  ├─ Horarios_Disponibilidad.md
+│  ├─ Tarifas_y_Presupuestos.md
+│  └─ Datos_Acceso_Clinica.md
+│
+├─ 💬 05_COMUNICACION/
+│  ├─ Llamadas/
+│  │  ├─ RESUMEN_ACUERDOS_LLAMADA.md
+│  │  └─ [futuras llamadas]
+│  │
+│  ├─ Emails/
+│  │  ├─ TEMPLATE_EMAIL_PARA_CARLOS.txt
+│  │  └─ [templates adicionales]
+│  │
+│  ├─ WhatsApp/
+│  │  ├─ Templates_Mensajes.md
+│  │  └─ Secuencias_Automaticas.md
+│  │
+│  └─ Mensajes_Sistemas_GHL/
+│     ├─ Mensajes_Pipeline_1.md
+│     ├─ Mensajes_Pipeline_2.md
+│     └─ [por pipeline]
+│
+├─ 📅 06_SPRINTS/
+│  ├─ SPRINT_PLAN_OVERVIEW.md           (resumen 4 sprints)
+│  │
+│  ├─ Sprint_1_Semanas_1-2/
+│  │  ├─ Plan_Sprint_1.md
+│  │  ├─ Tareas_Asignadas.md
+│  │  ├─ Deliverables.md
+│  │  └─ Checklist_Completitud.md
+│  │
+│  ├─ Sprint_2_Semanas_3-4/
+│  │  ├─ Plan_Sprint_2.md
+│  │  └─ [estructura similar]
+│  │
+│  ├─ Sprint_3_Semanas_5-6/
+│  │  ├─ Plan_Sprint_3.md
+│  │  └─ [estructura similar]
+│  │
+│  └─ Sprint_4_Semana_7/
+│     ├─ Plan_Sprint_4.md
+│     └─ [estructura similar]
+│
+├─ 📊 07_REPORTES_Y_SEGUIMIENTO/
+│  ├─ Progreso_Proyecto.md
+│  ├─ Cambios_Solicitados.md            (ex RESUMEN_CAMBIOS_V2.md)
+│  ├─ Issues_Bloqueadores.md
+│  └─ Métricas_Exito.md
+│
+├─ 🗂️  08_ARCHIVOS_ANTIGUOS/
+│  ├─ LISTA_ARCHIVOS.txt                (referencia histórica)
+│  └─ [versiones previas no usadas]
+│
+└─ ✅ ESTRUCTURA_FINAL.txt             (este archivo)
+
+================================================================================
+
+📌 RESUMEN:
+
+✅ 8 carpetas principales (00-08)
+✅ 19 sub-carpetas
+✅ Todos los archivos organizados por categoría
+✅ Fácil de navegar y mantener
+✅ Listo para cliente y equipo de desarrollo
+
+📁 CARPETAS CLAVE:
+• 00_INICIO      → Comienza aquí
+• 01_LEGAL       → Contratos
+• 02_ONBOARDING  → Material para reunión
+• 03_TECH        → Especificación (41 etapas)
+• 04_CLINICA     → Datos clínica
+• 05_COMMS       → Mensajes y templates
+• 06_SPRINTS     → Planificación semanal
+• 07_REPORTES    → Seguimiento
+
+🎯 PARA CARLOS:
+   → Ve a 02_ONBOARDING/FORM_RECOLECCION_INFO_CLINICA.md
+   → Llévalo a la reunión del miércoles
+
+🔧 PARA JOHN (Dev):
+   → Ve a 03_ESPECIFICACION_TECNICA/Pipelines/SUBETAPAS_DETALLADAS_TODOS_PIPELINES.md
+   → Eso es el documento maestro (41 etapas)
+
+📅 Última actualización: 13 de agosto de 2026
+================================================================================

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Integrado - Sistema Clínica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #e0e0e0;
+            background: #f9f9f9;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 0.95em;
+            font-weight: 500;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .nav-tab:hover {
+            background: #f0f0f0;
+        }
+
+        .nav-tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: white;
+        }
+
+        .content {
+            padding: 40px 30px;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status-complete {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95em;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            margin: 15px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            gap: 10px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .footer {
+            background: #f9f9f9;
+            padding: 30px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-save {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-clear {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-clear:hover {
+            background: #e0e0e0;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .comparison-card {
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-card h4 {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .comparison-card.complete {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .comparison-card.pending {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .summary-value {
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .nav-tabs {
+                overflow-x: auto;
+            }
+
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Sistema de Automatización - Clínica</h1>
+            <p>Información Integrada: Lo que ya sabemos + Lo que necesitamos de ti</p>
+        </div>
+
+        <!-- Navegación -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="mostrarTab('resumen')">📊 Resumen</button>
+            <button class="nav-tab" onclick="mostrarTab('completado')">✅ Ya Respondido</button>
+            <button class="nav-tab" onclick="mostrarTab('pendiente')">❓ Pendiente</button>
+            <button class="nav-tab" onclick="mostrarTab('instrucciones')">📖 Instrucciones</button>
+        </div>
+
+        <!-- TAB 1: RESUMEN -->
+        <div id="resumen" class="content active">
+            <div class="section-title">📊 Resumen Ejecutivo</div>
+
+            <div class="info-box">
+                <strong>Estado del Proyecto:</strong> Reunión de Onboarding programada para el <strong>Miércoles 16 de agosto a las 9:00 AM (Hora México)</strong>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">¿Cuánto ya tenemos?</h3>
+            <table>
+                <tr>
+                    <td><strong>Información Completa ✅</strong></td>
+                    <td><strong>Información Pendiente ❓</strong></td>
+                </tr>
+                <tr style="background: #d4edda;">
+                    <td>
+                        • Estructura de pagos (Stripe)<br>
+                        • Canales de comunicación (WhatsApp, Email, SMS)<br>
+                        • Disponibilidad en tiempo real<br>
+                        • Flujo de agendamiento<br>
+                        • Seguimiento post-cita<br>
+                        • Datos médicos sensibles<br>
+                        • Doctores volantes dinámicos
+                    </td>
+                    <td style="background: #fff3cd;">
+                        • Nombres/emails/teléfonos de doctores<br>
+                        • Nombres/emails/teléfonos de secretarias<br>
+                        • Horarios específicos<br>
+                        • Servicios y precios en MXN<br>
+                        • Monto de anticipo<br>
+                        • Hosting actual<br>
+                        • Duraciones de citas
+                    </td>
+                </tr>
+            </table>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">¿Cuándo necesitamos esto?</h3>
+            <div class="summary-row">
+                <span class="summary-label">Idealmente:</span>
+                <span class="summary-value">Antes del lunes 15 de agosto</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Como tarde:</span>
+                <span class="summary-value">Miércoles 16 de agosto en la reunión</span>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">¿Cómo entregar?</h3>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <span>📱 WhatsApp</span>
+                </div>
+                <div class="checkbox-item">
+                    <span>📧 Email</span>
+                </div>
+                <div class="checkbox-item">
+                    <span>☎️ Llamada</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: COMPLETADO -->
+        <div id="completado" class="content">
+            <div class="section-title">✅ Información Ya Respondida (de las llamadas)</div>
+
+            <h3>1. Estructura de Doctores</h3>
+            <div class="info-box">
+                <strong>Doctores:</strong> 3 doctores fijos (posiblemente 4-5 con volantes ocasionales)<br>
+                <strong>Volantes:</strong> Sí, se deben poder habilitar/deshabilitar dinámicamente<br>
+                <strong>Escalabilidad:</strong> Sistema pensado para múltiples doctores desde el inicio
+            </div>
+
+            <h3>2. Secretarias</h3>
+            <div class="info-box">
+                <strong>Cantidad:</strong> 3 secretarias<br>
+                <strong>Reunión técnica:</strong> Se coordinará aparte para conectar WhatsApp
+            </div>
+
+            <h3>3. Servicios</h3>
+            <div class="info-box">
+                <strong>Tipos principales:</strong> Estética, Dermatología, Cirugía Plástica, Aparatología<br>
+                <strong>Opciones:</strong> Paquete o Sesión Individual<br>
+                <strong>Mayor margen:</strong> Aparatología (aparatos caros)
+            </div>
+
+            <h3>4. Métodos de Pago</h3>
+            <div class="info-box">
+                <strong>Único método:</strong> Stripe (tarjeta crédito/débito)<br>
+                <strong>Descartados:</strong> PagSeguro, Mercado Pago, SMS
+            </div>
+
+            <h3>5. Comunicación</h3>
+            <div class="info-box">
+                <strong>WhatsApp:</strong> 3 números actuales → 1 con API oficial para recordatorios<br>
+                <strong>Email:</strong> Se creará Gmail nuevo<br>
+                <strong>SMS:</strong> No necesario en México
+            </div>
+
+            <h3>6. Agendamiento</h3>
+            <div class="info-box">
+                <strong>Flujo:</strong> Paciente selecciona tratamiento → Elige doctor → Ve SOLO agenda de ese doctor<br>
+                <strong>Disponibilidad:</strong> En tiempo real<br>
+                <strong>Recordatorios:</strong> Automáticos (24h, 8h, 4h, 1h, 15min, 5min)
+            </div>
+
+            <h3>7. Datos Médicos</h3>
+            <div class="info-box">
+                <strong>Captura:</strong> Historial general + Pre/Post-operatorio<br>
+                <strong>Críticos:</strong> Alergias y medicamentos<br>
+                <strong>Formulario:</strong> Bidireccional (paciente llena, doctora completa)
+            </div>
+
+            <h3>8. Campañas y Leads</h3>
+            <div class="info-box">
+                <strong>Principal:</strong> Meta Ads (Facebook/Instagram)<br>
+                <strong>Dos tipos:</strong> Campaña general (página) + Campaña dirigida (por tratamiento)<br>
+                <strong>Contenido:</strong> Solo campañas pagadas, no generar contenido
+            </div>
+
+            <h3>9. Anticipo Obligatorio</h3>
+            <div class="info-box">
+                <strong>Decisión:</strong> Sí, anticipo obligatorio<br>
+                <strong>Razón:</strong> Reducir no-shows en procedimientos con quirófano/equipo<br>
+                <strong>Monto:</strong> ❓ Por definir
+            </div>
+
+            <h3>10. Estructura de Pagos</h3>
+            <div class="info-box">
+                <strong>Setup:</strong> $2,500 USD (~42,800 MXN)<br>
+                <strong>Estructura:</strong> 50% ahora + 50% a los 5 días que funcione<br>
+                <strong>Acompañamiento:</strong> 3-6 meses (en negociación)
+            </div>
+        </div>
+
+        <!-- TAB 3: PENDIENTE -->
+        <div id="pendiente" class="content">
+            <div class="section-title">❓ Información Que Necesitamos</div>
+
+            <form id="formulario">
+                <!-- Doctores -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">1️⃣ Doctores de la Clínica</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre Completo</th>
+                            <th>Especialidades</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="doctor1_nombre"></td>
+                            <td><input type="text" name="doctor1_esp" placeholder="Ej: Cirugía Plástica"></td>
+                            <td><input type="email" name="doctor1_email"></td>
+                            <td><input type="tel" name="doctor1_tel"></td>
+                            <td><select name="doctor1_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="doctor2_nombre"></td>
+                            <td><input type="text" name="doctor2_esp"></td>
+                            <td><input type="email" name="doctor2_email"></td>
+                            <td><input type="tel" name="doctor2_tel"></td>
+                            <td><select name="doctor2_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="doctor3_nombre"></td>
+                            <td><input type="text" name="doctor3_esp"></td>
+                            <td><input type="email" name="doctor3_email"></td>
+                            <td><input type="tel" name="doctor3_tel"></td>
+                            <td><select name="doctor3_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" name="doctor4_nombre"></td>
+                            <td><input type="text" name="doctor4_esp"></td>
+                            <td><input type="email" name="doctor4_email"></td>
+                            <td><input type="tel" name="doctor4_tel"></td>
+                            <td><select name="doctor4_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Secretarias -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">2️⃣ Secretarias</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre Completo</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="sec1_nombre"></td>
+                            <td><input type="email" name="sec1_email"></td>
+                            <td><input type="tel" name="sec1_tel"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="sec2_nombre"></td>
+                            <td><input type="email" name="sec2_email"></td>
+                            <td><input type="tel" name="sec2_tel"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="sec3_nombre"></td>
+                            <td><input type="email" name="sec3_email"></td>
+                            <td><input type="tel" name="sec3_tel"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Horarios -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">3️⃣ Horarios de Trabajo</h3>
+                <label><strong>¿A qué hora abren y cierran? (por cada doctor, si varían)</strong></label>
+                <textarea name="horarios" placeholder="Ejemplo:&#10;Dra. María:&#10;Lunes-Viernes: 9:00 AM - 1:00 PM y 3:00 PM - 6:00 PM&#10;Sábado: 10:00 AM - 1:00 PM&#10;Domingo: Cerrado"></textarea>
+
+                <!-- Servicios -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">4️⃣ Servicios y Precios (en pesos MXN)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Servicio</th>
+                            <th>Precio (MXN)</th>
+                            <th>Duración (min)</th>
+                            <th>Especialista</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="serv1_nombre"></td>
+                            <td><input type="number" name="serv1_precio" placeholder="5000"></td>
+                            <td><input type="number" name="serv1_dur" placeholder="60"></td>
+                            <td><input type="text" name="serv1_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="serv2_nombre"></td>
+                            <td><input type="number" name="serv2_precio"></td>
+                            <td><input type="number" name="serv2_dur"></td>
+                            <td><input type="text" name="serv2_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="serv3_nombre"></td>
+                            <td><input type="number" name="serv3_precio"></td>
+                            <td><input type="number" name="serv3_dur"></td>
+                            <td><input type="text" name="serv3_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" name="serv4_nombre"></td>
+                            <td><input type="number" name="serv4_precio"></td>
+                            <td><input type="number" name="serv4_dur"></td>
+                            <td><input type="text" name="serv4_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" name="serv5_nombre"></td>
+                            <td><input type="number" name="serv5_precio"></td>
+                            <td><input type="number" name="serv5_dur"></td>
+                            <td><input type="text" name="serv5_doc"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Anticipo -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">5️⃣ Monto de Anticipo Antes de Cita</h3>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" name="anticipo" value="100">
+                        <label>100% del total</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="anticipo" value="50">
+                        <label>50% del total</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="anticipo" value="otro">
+                        <label>Otro: <input type="text" name="anticipo_otro" style="width: 200px; margin-left: 10px;"></label>
+                    </div>
+                </div>
+
+                <!-- Hosting -->
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">6️⃣ Hosting Actual</h3>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" value="godaddy">
+                        <label>Godaddy</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" value="namecheap">
+                        <label>Namecheap</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" value="aws">
+                        <label>AWS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" value="otro">
+                        <label>Otro: <input type="text" name="hosting_otro" style="width: 200px; margin-left: 10px;"></label>
+                    </div>
+                </div>
+
+                <label style="display: block; margin-top: 20px;"><strong>¿Quién tiene acceso/contraseña?</strong></label>
+                <input type="text" name="hosting_contacto" placeholder="Nombre y contacto de la persona">
+
+                <!-- Botones -->
+                <div class="button-group">
+                    <button type="button" class="btn-clear" onclick="document.getElementById('formulario').reset();">Limpiar</button>
+                    <button type="button" class="btn-save" onclick="descargarFormulario();">⬇️ Descargar Respuestas</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- TAB 4: INSTRUCCIONES -->
+        <div id="instrucciones" class="content">
+            <div class="section-title">📖 Cómo Usar Este Formulario</div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">🎯 Objetivo</h3>
+            <div class="info-box">
+                Este documento integra:
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>Lo que ya sabemos</strong> → Ver pestaña "✅ Ya Respondido"</li>
+                    <li><strong>Lo que falta</strong> → Ver pestaña "❓ Pendiente" y llenar los campos</li>
+                    <li><strong>Contexto completo</strong> → Todo en un mismo lugar</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">📝 Cómo Completar</h3>
+            <div class="info-box">
+                <strong>Paso 1:</strong> Ve a la pestaña "❓ Pendiente"<br>
+                <strong>Paso 2:</strong> Llena TODOS los campos (6 secciones)<br>
+                <strong>Paso 3:</strong> Haz clic en "⬇️ Descargar Respuestas"<br>
+                <strong>Paso 4:</strong> Envíame el archivo por WhatsApp o email
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">❗ Importante</h3>
+            <div class="info-box">
+                ✅ Si no sabes algo, <strong>DÉJALO EN BLANCO</strong> — lo aclaramos en la reunión<br>
+                ✅ Sé específico con datos (nombres reales, emails válidos, teléfonos activos)<br>
+                ✅ Si hay dudas, PREGUNTA — no hay preguntas tontas<br>
+                ✅ Idealmente antes del lunes 15 de agosto
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">📞 Contacto</h3>
+            <div class="info-box">
+                Si tienes dudas mientras llenas esto, escribe sin dudar.<br>
+                Estoy aquí para ayudarte.
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">📊 Resumen Rápido</h3>
+            <table>
+                <tr>
+                    <td><strong>Sección</strong></td>
+                    <td><strong>Qué pedir</strong></td>
+                    <td><strong>Formato</strong></td>
+                </tr>
+                <tr style="background: #f5f5f5;">
+                    <td>1. Doctores</td>
+                    <td>Nombre, especialidades, email, teléfono</td>
+                    <td>Tabla</td>
+                </tr>
+                <tr>
+                    <td>2. Secretarias</td>
+                    <td>Nombre, email, teléfono</td>
+                    <td>Tabla</td>
+                </tr>
+                <tr style="background: #f5f5f5;">
+                    <td>3. Horarios</td>
+                    <td>Lunes-viernes, sábado, domingo (por doctor)</td>
+                    <td>Texto libre</td>
+                </tr>
+                <tr>
+                    <td>4. Servicios</td>
+                    <td>Nombre, precio MXN, duración, especialista</td>
+                    <td>Tabla</td>
+                </tr>
+                <tr style="background: #f5f5f5;">
+                    <td>5. Anticipo</td>
+                    <td>¿100% o 50% o otro?</td>
+                    <td>Opción única</td>
+                </tr>
+                <tr>
+                    <td>6. Hosting</td>
+                    <td>Dónde está alojado + quién tiene acceso</td>
+                    <td>Opción + texto</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
+        <p>Documento Integrado - Reunión Onboarding 16 de Agosto</p>
+        <p>Gracias por tu ayuda, Carlos. Con estos datos avanzamos rápido. 💪</p>
+    </div>
+
+    <script>
+        function mostrarTab(tabName) {
+            // Ocultar todos los tabs
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Quitar activo de todos los botones
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+
+            // Mostrar tab seleccionado
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function descargarFormulario() {
+            const formData = new FormData(document.getElementById('formulario'));
+            let contenido = "INFORMACIÓN PARA LA CLÍNICA - SISTEMA DE AUTOMATIZACIÓN\n";
+            contenido += "=" .repeat(60) + "\n\n";
+
+            let seccion = "";
+            for (let [key, value] of formData) {
+                if (value) {
+                    if (key.includes('doctor')) {
+                        if (!seccion.includes('DOCTORES')) {
+                            seccion = "\n1. DOCTORES DE LA CLÍNICA\n" + "-".repeat(30) + "\n";
+                            contenido += seccion;
+                        }
+                    } else if (key.includes('sec')) {
+                        if (!seccion.includes('SECRETARIAS')) {
+                            seccion = "\n2. SECRETARIAS\n" + "-".repeat(30) + "\n";
+                            contenido += seccion;
+                        }
+                    } else if (key.includes('horarios')) {
+                        contenido += "\n3. HORARIOS\n" + "-".repeat(30) + "\n" + value + "\n";
+                        seccion = "";
+                    } else if (key.includes('serv')) {
+                        if (!seccion.includes('SERVICIOS')) {
+                            seccion = "\n4. SERVICIOS Y PRECIOS\n" + "-".repeat(30) + "\n";
+                            contenido += seccion;
+                        }
+                    } else if (key.includes('anticipo') && key === 'anticipo') {
+                        contenido += "\n5. ANTICIPO: " + value + "\n";
+                    } else if (key.includes('hosting') && key === 'hosting') {
+                        contenido += "\n6. HOSTING: " + value + "\n";
+                    }
+
+                    if (!key.includes('horarios') && !key === 'anticipo' && !key === 'hosting') {
+                        contenido += key + ": " + value + "\n";
+                    }
+                }
+            }
+
+            const blob = new Blob([contenido], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'FORMULARIO_CLINICA_' + new Date().toISOString().split('T')[0] + '.txt';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>

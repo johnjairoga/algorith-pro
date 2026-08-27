@@ -1,0 +1,52 @@
+{
+  "success": [
+    "evaluaciones",
+    "aulas",
+    "pt-pt-— joão",
+    "pt-pt-— maria",
+    "pt-pt-— carlos",
+    "pt-pt-— ana",
+    "reavaliaciones"
+  ],
+  "failed": [],
+  "byCalendar": {
+    "evaluaciones": {
+      "status": "success",
+      "id": "9npsNp16lkqnYOc1kVIe",
+      "name": "Evaluaciones"
+    },
+    "aulas": {
+      "status": "success",
+      "id": "dvTs2ubSEqJ5XDuEJ1IZ",
+      "name": "Aulas"
+    },
+    "PT — João": {
+      "status": "success",
+      "id": "TDFIcfoolDDKX9xsXd8c",
+      "email": "joao@personalgeronto.com"
+    },
+    "PT — Maria": {
+      "status": "success",
+      "id": "xzQ5s8zvZxvwDCJV5gDO",
+      "email": "maria@personalgeronto.com"
+    },
+    "PT — Carlos": {
+      "status": "success",
+      "id": "REjy4vXVO9DuCfNnI3xm",
+      "email": "carlos@personalgeronto.com"
+    },
+    "PT — Ana": {
+      "status": "success",
+      "id": "Mvnn88RR6R9OeMxZwpP9",
+      "email": "ana@personalgeronto.com"
+    },
+    "reavaliaciones": {
+      "status": "success",
+      "id": "yaJBxjP8gJMy4PhXVQ5b",
+      "name": "Reavaliaciones"
+    }
+  },
+  "startTime": "2026-08-05T04:25:55.331Z",
+  "endTime": "2026-08-05T04:25:57.777Z",
+  "duration": 2.446
+}

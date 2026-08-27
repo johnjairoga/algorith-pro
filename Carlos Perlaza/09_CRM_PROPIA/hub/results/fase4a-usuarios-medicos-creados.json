@@ -1,0 +1,50 @@
+{
+  "success": [
+    "Dra. Anja Arellano M.",
+    "Dr. Aristides Arellano Huacuja",
+    "Dra. Dafne Arellano Montalvo"
+  ],
+  "failed": [],
+  "byMedico": {
+    "Dra. Anja Arellano M.": {
+      "status": "success",
+      "contact_id": "Ex4Pq6BEkUG9PsZ5fWrS",
+      "email": "anja.arellano@clinicapuebla.com",
+      "telefono": "81 46 82 32 89",
+      "especialidades": [
+        "Cirugía Estética",
+        "Restauración Capilar",
+        "Tratamientos Láser"
+      ],
+      "original_id": "medico_001"
+    },
+    "Dr. Aristides Arellano Huacuja": {
+      "status": "success",
+      "contact_id": "dCCYmv4C6Mc5sFQMCguo",
+      "email": "aristides.arellano@clinicapuebla.com",
+      "telefono": "22 23 23 09 72",
+      "especialidades": [
+        "Cirugía Plástica",
+        "Cirugía Estética",
+        "Cirugía Reconstructiva",
+        "Medicina Estética"
+      ],
+      "original_id": "medico_002"
+    },
+    "Dra. Dafne Arellano Montalvo": {
+      "status": "success",
+      "contact_id": "Pqcu3aam4VjDRuN46VJd",
+      "email": "dafne.arellano@clinicapuebla.com",
+      "telefono": "81 45 67 89 01",
+      "especialidades": [
+        "Medicina Estética",
+        "Dermatología",
+        "Tratamientos Anti-envejecimiento"
+      ],
+      "original_id": "medico_003"
+    }
+  },
+  "startTime": "2026-08-27T03:27:06.175Z",
+  "endTime": "2026-08-27T03:27:10.707Z",
+  "duration": 4.532
+}

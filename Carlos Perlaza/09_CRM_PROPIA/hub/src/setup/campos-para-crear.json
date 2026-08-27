@@ -1,0 +1,141 @@
+{
+  "locationId": "SpY51xVGgkHVsHhd2oRQ",
+  "objectKey": "oportunidade",
+  "campos": [
+    {
+      "displayName": "Aniversário",
+      "description": "Data de nascimento para automação de parabéns",
+      "type": "date",
+      "dataType": "DATE",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "operacional",
+      "showInForms": true
+    },
+    {
+      "displayName": "Data da Primeira Aula",
+      "description": "Quando iniciou efetivamente o atendimento",
+      "type": "date",
+      "dataType": "DATE",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "operacional",
+      "showInForms": true
+    },
+    {
+      "displayName": "Observações de Saúde",
+      "description": "Notas clínicas do personal (medicações, limitações, evolução)",
+      "type": "text",
+      "dataType": "TEXT",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "operacional",
+      "showInForms": true
+    },
+    {
+      "displayName": "Vaga Aplicada",
+      "description": "Qual posição o candidato está se candidatando",
+      "type": "select",
+      "dataType": "SINGLE_OPTIONS",
+      "options": [
+        "Personal Trainer Domiciliar",
+        "Personal Trainer Academia",
+        "Trainer Presencial",
+        "Outro"
+      ],
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Experiência (Anos)",
+      "description": "Anos de experiência como personal trainer (para scoring automático)",
+      "type": "select",
+      "dataType": "SINGLE_OPTIONS",
+      "options": [
+        "Menos de 2 anos",
+        "2-5 anos",
+        "5-10 anos",
+        "Mais de 10 anos"
+      ],
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Certificações",
+      "description": "Certificações profissionais relevantes",
+      "type": "select",
+      "dataType": "SINGLE_OPTIONS",
+      "options": [
+        "CREF ativo",
+        "CREF vencido",
+        "Sem CREF",
+        "Outras certificações"
+      ],
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Disponibilidade",
+      "description": "Horários disponíveis (ex: Manhã, Tarde, Flexível, Tempo integral)",
+      "type": "text",
+      "dataType": "TEXT",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Score de Triagem",
+      "description": "Pontuação automática em triagem inicial (0-100) - Calculado por workflow",
+      "type": "number",
+      "dataType": "NUMERICAL",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Resumo do Candidato",
+      "description": "Experiência, certificações e skills relevantes - Gerado automaticamente",
+      "type": "text",
+      "dataType": "TEXT",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Data de Triagem",
+      "description": "Data quando se completou a triagem automática",
+      "type": "date",
+      "dataType": "DATE",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Data de Entrevista",
+      "description": "Quando foi/será a entrevista com Camila",
+      "type": "date",
+      "dataType": "DATE",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Notas de Entrevista",
+      "description": "Observações de Camila depois da entrevista",
+      "type": "text",
+      "dataType": "TEXT",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    },
+    {
+      "displayName": "Motivo da Rejeição",
+      "description": "Razão se o candidato foi rejeitado",
+      "type": "text",
+      "dataType": "TEXT",
+      "parentId": "zYFtIeVzQkODSvLp6o7p",
+      "categoria": "recrutamento",
+      "showInForms": true
+    }
+  ]
+}

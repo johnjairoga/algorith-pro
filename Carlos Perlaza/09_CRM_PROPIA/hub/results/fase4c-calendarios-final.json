@@ -1,0 +1,50 @@
+{
+  "success": [],
+  "failed": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "byCalendar": {
+    "Cirugía Plástica Facial": {
+      "status": "failed",
+      "error": "Invalid team members: Ex4Pq6BEkUG9PsZ5fWrS,dCCYmv4C6Mc5sFQMCguo"
+    },
+    "Cirugía Plástica Corporal": {
+      "status": "failed",
+      "error": "Invalid team members: Ex4Pq6BEkUG9PsZ5fWrS,dCCYmv4C6Mc5sFQMCguo"
+    },
+    "Cirugía de Restauración Capilar": {
+      "status": "failed",
+      "error": "Invalid team members: Ex4Pq6BEkUG9PsZ5fWrS"
+    },
+    "Tratamiento de Restauración Capilar": {
+      "status": "failed",
+      "error": "Invalid team members: Ex4Pq6BEkUG9PsZ5fWrS,dCCYmv4C6Mc5sFQMCguo"
+    },
+    "Moldeo Corporal": {
+      "status": "failed",
+      "error": "Invalid team members: Pqcu3aam4VjDRuN46VJd"
+    },
+    "Tratamientos Láser": {
+      "status": "failed",
+      "error": "Invalid team members: Ex4Pq6BEkUG9PsZ5fWrS"
+    },
+    "Medicina Estética Antienvejecimiento": {
+      "status": "failed",
+      "error": "Invalid team members: dCCYmv4C6Mc5sFQMCguo,Pqcu3aam4VjDRuN46VJd"
+    },
+    "Dermatología y Alergias": {
+      "status": "failed",
+      "error": "Invalid team members: dCCYmv4C6Mc5sFQMCguo,Pqcu3aam4VjDRuN46VJd"
+    }
+  },
+  "startTime": "2026-08-27T03:29:41.112Z",
+  "endTime": "2026-08-27T03:29:53.344Z",
+  "duration": 12.232
+}

@@ -1,0 +1,189 @@
+{
+  "fields": {
+    "comercial": [
+      {
+        "name": "origem_lead",
+        "displayName": "Origem do Lead",
+        "type": "select",
+        "options": [
+          "Instagram",
+          "Indicação",
+          "Tráfego pago",
+          "Google Meu Negócio",
+          "Base antiga"
+        ],
+        "description": "Canal de origem do contato"
+      },
+      {
+        "name": "regiao_atendimento",
+        "displayName": "Região de Atendimento",
+        "type": "select",
+        "options": [
+          "Meireles",
+          "Delta",
+          "Cambeba",
+          "Outro bairro nobre",
+          "Academia dos Aposentados"
+        ],
+        "description": "Bairro/região onde o cliente prefere ser atendido (crítico para foco geográfico)"
+      },
+      {
+        "name": "condicao_saude",
+        "displayName": "Condição de Saúde",
+        "type": "text",
+        "description": "Diagnósticos, limitações ou necessidades especiais (ex: Parkinson, pós-cirúrgico)"
+      },
+      {
+        "name": "responsavel_familiar",
+        "displayName": "Responsável Familiar",
+        "type": "text",
+        "description": "Nome e telefone de quem decide na família (normalmente adulto responsável)"
+      },
+      {
+        "name": "modalidade",
+        "displayName": "Modalidade",
+        "type": "select",
+        "options": [
+          "Domiciliar",
+          "Academia"
+        ],
+        "description": "Onde as aulas acontecem"
+      },
+      {
+        "name": "frequencia_semanal",
+        "displayName": "Frequência Semanal",
+        "type": "select",
+        "options": [
+          "2x na semana",
+          "3x na semana",
+          "Outra"
+        ],
+        "description": "Quantas vezes por semana treina"
+      },
+      {
+        "name": "ticket_pacote",
+        "displayName": "Ticket / Pacote",
+        "type": "text",
+        "description": "Valor mensal ou pacote contratado"
+      }
+    ],
+    "operacional": [
+      {
+        "name": "personal_responsavel",
+        "displayName": "Personal Responsável",
+        "type": "text",
+        "description": "Nome do trainer que atende este cliente"
+      },
+      {
+        "name": "data_avaliacao",
+        "displayName": "Data de Avaliação",
+        "type": "date",
+        "description": "Quando foi feita a avaliação inicial"
+      },
+      {
+        "name": "data_reavaliacao",
+        "displayName": "Data de Reavaliação",
+        "type": "date",
+        "description": "Próxima reavaliação trimestral"
+      },
+      {
+        "name": "aniversario",
+        "displayName": "Aniversário",
+        "type": "date",
+        "description": "Data de nascimento para automação de parabéns"
+      },
+      {
+        "name": "data_primeira_aula",
+        "displayName": "Data da Primeira Aula",
+        "type": "date",
+        "description": "Quando iniciou efetivamente o atendimento"
+      },
+      {
+        "name": "observacoes_saude",
+        "displayName": "Observações de Saúde",
+        "type": "text",
+        "description": "Notas clínicas do personal (medicações, limitações, evolução)"
+      }
+    ],
+    "recrutamento": [
+      {
+        "name": "vaga_aplicada",
+        "displayName": "Vaga Aplicada",
+        "type": "select",
+        "options": [
+          "Personal Trainer Domiciliar",
+          "Personal Trainer Academia",
+          "Trainer Presencial",
+          "Outro"
+        ],
+        "description": "Qual posição o candidato está se candidatando"
+      },
+      {
+        "name": "experiencia_anos",
+        "displayName": "Experiência (Anos)",
+        "type": "select",
+        "options": [
+          "Menos de 2 anos",
+          "2-5 anos",
+          "5-10 anos",
+          "Mais de 10 anos"
+        ],
+        "description": "Anos de experiência como personal trainer (para scoring automático)"
+      },
+      {
+        "name": "certificacoes",
+        "displayName": "Certificações",
+        "type": "select",
+        "options": [
+          "CREF ativo",
+          "CREF vencido",
+          "Sem CREF",
+          "Outras certificações"
+        ],
+        "description": "Certificações profissionais relevantes"
+      },
+      {
+        "name": "disponibilidade",
+        "displayName": "Disponibilidade",
+        "type": "text",
+        "description": "Horários disponíveis (ex: Manhã, Tarde, Flexível, Tempo integral)"
+      },
+      {
+        "name": "score_triagem",
+        "displayName": "Score de Triagem",
+        "type": "number",
+        "description": "Pontuação automática em triagem inicial (0-100) - Calculado por workflow"
+      },
+      {
+        "name": "resumo_candidato",
+        "displayName": "Resumo do Candidato",
+        "type": "text",
+        "description": "Experiência, certificações e skills relevantes - Gerado automaticamente"
+      },
+      {
+        "name": "data_triagem",
+        "displayName": "Data de Triagem",
+        "type": "date",
+        "description": "Data quando se completou a triagem automática"
+      },
+      {
+        "name": "data_entrevista",
+        "displayName": "Data de Entrevista",
+        "type": "date",
+        "description": "Quando foi/será a entrevista com Camila"
+      },
+      {
+        "name": "notas_entrevista",
+        "displayName": "Notas de Entrevista",
+        "type": "text",
+        "description": "Observações de Camila depois da entrevista"
+      },
+      {
+        "name": "motivo_rechazo",
+        "displayName": "Motivo da Rejeição",
+        "type": "text",
+        "description": "Razão se o candidato foi rejeitado"
+      }
+    ]
+  }
+}

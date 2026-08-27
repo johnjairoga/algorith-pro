@@ -1,0 +1,134 @@
+{
+  "success": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "failed": [],
+  "byCalendar": {
+    "Cirugía Plástica Facial": {
+      "status": "success",
+      "id": "7V5YmlyEffcms3U8H9dU",
+      "slug": "cirugia-plastica-facial",
+      "pipeline": "Consulta Inicial",
+      "medicos": [
+        {
+          "nombre": "Dra. Anja Arellano M.",
+          "id": "JYSG5dACWmGYUGm4Wg5t"
+        },
+        {
+          "nombre": "Dr. Aristides Arellano Huacuja",
+          "id": "sgFIbd7atepBr4mBfbkn"
+        }
+      ]
+    },
+    "Cirugía Plástica Corporal": {
+      "status": "success",
+      "id": "muQbHTk7eE5uTYaj213G",
+      "slug": "cirugia-plastica-corporal",
+      "pipeline": "Consulta Inicial",
+      "medicos": [
+        {
+          "nombre": "Dra. Anja Arellano M.",
+          "id": "JYSG5dACWmGYUGm4Wg5t"
+        },
+        {
+          "nombre": "Dr. Aristides Arellano Huacuja",
+          "id": "sgFIbd7atepBr4mBfbkn"
+        }
+      ]
+    },
+    "Cirugía de Restauración Capilar": {
+      "status": "success",
+      "id": "83TLMLAXFJksXeeyz542",
+      "slug": "cirugia-restauracion-capilar",
+      "pipeline": "Consulta Inicial",
+      "medicos": [
+        {
+          "nombre": "Dra. Anja Arellano M.",
+          "id": "JYSG5dACWmGYUGm4Wg5t"
+        }
+      ]
+    },
+    "Tratamiento de Restauración Capilar": {
+      "status": "success",
+      "id": "2jBSS0SE8fNI6kq25e4G",
+      "slug": "tratamiento-restauracion-capilar",
+      "pipeline": "Recurrencia",
+      "medicos": [
+        {
+          "nombre": "Dra. Anja Arellano M.",
+          "id": "JYSG5dACWmGYUGm4Wg5t"
+        },
+        {
+          "nombre": "Dr. Aristides Arellano Huacuja",
+          "id": "sgFIbd7atepBr4mBfbkn"
+        }
+      ]
+    },
+    "Moldeo Corporal": {
+      "status": "success",
+      "id": "nVcErRv4ArTdzV9qia4H",
+      "slug": "moldeo-corporal-servicios",
+      "pipeline": "Aparatología",
+      "medicos": [
+        {
+          "nombre": "Dra. Dafne Arellano Montalvo",
+          "id": "WPleSzuP5vPp0WlQ7u3a"
+        }
+      ]
+    },
+    "Tratamientos Láser": {
+      "status": "success",
+      "id": "BdRChNBHRGVO6guC0YPW",
+      "slug": "tratamientos-laser-servicios",
+      "pipeline": "Aparatología",
+      "medicos": [
+        {
+          "nombre": "Dra. Anja Arellano M.",
+          "id": "JYSG5dACWmGYUGm4Wg5t"
+        }
+      ]
+    },
+    "Medicina Estética Antienvejecimiento": {
+      "status": "success",
+      "id": "wSdVW29vz7s4iq4uE9db",
+      "slug": "medicina-estetica-antienvejecimiento-servicios",
+      "pipeline": "Recurrencia",
+      "medicos": [
+        {
+          "nombre": "Dr. Aristides Arellano Huacuja",
+          "id": "sgFIbd7atepBr4mBfbkn"
+        },
+        {
+          "nombre": "Dra. Dafne Arellano Montalvo",
+          "id": "WPleSzuP5vPp0WlQ7u3a"
+        }
+      ]
+    },
+    "Dermatología y Alergias": {
+      "status": "success",
+      "id": "5sgP6s4tuXrs8pN7oOlt",
+      "slug": "dermatologia-alergias-servicios",
+      "pipeline": "Consulta Inicial",
+      "medicos": [
+        {
+          "nombre": "Dr. Aristides Arellano Huacuja",
+          "id": "sgFIbd7atepBr4mBfbkn"
+        },
+        {
+          "nombre": "Dra. Dafne Arellano Montalvo",
+          "id": "WPleSzuP5vPp0WlQ7u3a"
+        }
+      ]
+    }
+  },
+  "startTime": "2026-08-27T03:43:25.332Z",
+  "endTime": "2026-08-27T03:43:38.253Z",
+  "duration": 12.921
+}

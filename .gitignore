@@ -46,8 +46,14 @@ dist/
 build/
 *.log
 
-# Carpetas específicas de cliente
-Carlos Perlaza/
+# Archivos privados y sensibles de clientes
+Carlos Perlaza/**/Contratos/
+Carlos Perlaza/**/Documentos Personales/
+Carlos Perlaza/**/Documentos Legales/
+Carlos Perlaza/**/*contrato*.docx
+Carlos Perlaza/**/*contrato*.pdf
+Carlos Perlaza/**/*personal*.docx
+Carlos Perlaza/**/*personal*.pdf
 Periodicos Alagoas/CRM/config-backup/
 Periodicos Alagoas/CRM/src-backup/
 Periodicos Alagoas/Imagnes/

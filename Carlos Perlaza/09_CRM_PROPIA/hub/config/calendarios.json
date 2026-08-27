@@ -1,0 +1,164 @@
+{
+  "calendarios": {
+    "evaluaciones": {
+      "name": "Evaluaciones",
+      "description": "Agendar y registrar evaluaciones gratuitas de nuevos alumnos (entrada del funil comercial). Duración estándar: 1 hora. Horario: 8h-20h.",
+      "type": "booking",
+      "duration": 60,
+      "businessHours": {
+        "start": "08:00",
+        "end": "20:00",
+        "timezone": "America/Fortaleza",
+        "daysOfWeek": [1, 2, 3, 4, 5, 6]
+      },
+      "bufferTime": {
+        "before": 0,
+        "after": 0
+      },
+      "color": "#2E7D32",
+      "relatedFields": {
+        "dateField": "data_avaliacao",
+        "pipeline": "Funil Comercial",
+        "stages": ["Avaliação agendada"]
+      },
+      "tags": ["avaliacao-agendada"],
+      "automations": ["Auto 2: Confirmación y recordatorios"],
+      "notes": "Fuente de verdad para evaluaciones agendadas"
+    },
+    "aulas": {
+      "name": "Aulas",
+      "description": "Registrar aulas personalizadas de alumnos activos. Duración estándar: 1 hora. Horario: 8h-20h. Origen: Personal trainers (individual o sync con Google Calendar). Crítica para calcular última aula e inactividad.",
+      "type": "event",
+      "duration": 60,
+      "businessHours": {
+        "start": "08:00",
+        "end": "20:00",
+        "timezone": "America/Fortaleza",
+        "daysOfWeek": [1, 2, 3, 4, 5, 6]
+      },
+      "bufferTime": {
+        "before": 0,
+        "after": 0
+      },
+      "color": "#1565C0",
+      "relatedFields": {
+        "dateField": "data_ultima_aula",
+        "pipeline": "Carteira de Alunos",
+        "stages": ["Ativo", "Pausado"]
+      },
+      "tags": ["aluno-ativo"],
+      "automations": [
+        "Auto 3: Recordatorio aula (24h y 2h)",
+        "Auto 5: Detección inactividad (30/60 días)"
+      ],
+      "syncWithGoogle": true,
+      "googleCalendarField": "personal_responsavel",
+      "notes": "Fuente de verdad para registro de aulas. Sincronizar con Google Calendar de cada personal trainer."
+    },
+    "personal_trainers": {
+      "name": "Personal Trainers (x4)",
+      "description": "Calendario individual de disponibilidad para cada personal trainer. Sincronización bidireccional con Google Calendar personal. Horario: flexible (8h-20h base). Fuente de verdad: Google Calendar.",
+      "count": 4,
+      "trainers": [
+        {
+          "name": "PT — João",
+          "contactEmail": "joao@personalgeronto.com",
+          "services": ["Avaliação (1h)", "Aula (1h)", "Sesión especial (1.5h)"],
+          "businessHours": {
+            "start": "08:00",
+            "end": "20:00",
+            "timezone": "America/Fortaleza",
+            "daysOfWeek": [1, 2, 3, 4, 5, 6]
+          },
+          "breaks": [
+            { "time": "12:00-13:30", "reason": "Almuerço" },
+            { "time": "16:00-16:30", "reason": "Traslados" }
+          ],
+          "color": "#D32F2F"
+        },
+        {
+          "name": "PT — Maria",
+          "contactEmail": "maria@personalgeronto.com",
+          "services": ["Avaliação (1h)", "Aula (1h)"],
+          "businessHours": {
+            "start": "08:00",
+            "end": "20:00",
+            "timezone": "America/Fortaleza",
+            "daysOfWeek": [1, 2, 3, 4, 5, 6]
+          },
+          "breaks": [
+            { "time": "12:00-13:30", "reason": "Almuerço" },
+            { "time": "17:00-17:30", "reason": "Traslados" }
+          ],
+          "color": "#F57C00"
+        },
+        {
+          "name": "PT — Carlos",
+          "contactEmail": "carlos@personalgeronto.com",
+          "services": ["Avaliação (1h)", "Aula (1h)"],
+          "businessHours": {
+            "start": "08:00",
+            "end": "20:00",
+            "timezone": "America/Fortaleza",
+            "daysOfWeek": [1, 2, 3, 4, 5, 6]
+          },
+          "breaks": [
+            { "time": "12:00-13:30", "reason": "Almuerço" }
+          ],
+          "color": "#0097A7"
+        },
+        {
+          "name": "PT — Ana",
+          "contactEmail": "ana@personalgeronto.com",
+          "services": ["Avaliação (1h)", "Aula (1h)", "Sesión especial (1.5h)"],
+          "businessHours": {
+            "start": "08:00",
+            "end": "20:00",
+            "timezone": "America/Fortaleza",
+            "daysOfWeek": [1, 2, 3, 4, 5, 6]
+          },
+          "breaks": [
+            { "time": "12:00-13:30", "reason": "Almuerço" },
+            { "time": "15:00-15:30", "reason": "Traslados" }
+          ],
+          "color": "#6A1B9A"
+        }
+      ],
+      "type": "availability",
+      "syncWithGoogle": true,
+      "syncFrequency": "15min",
+      "automations": ["Auto 3: Recordatorios aula"],
+      "notes": "Sincronización crítica con Google Calendar de cada PT. Fuente única de verdad para disponibilidad real."
+    },
+    "reavaliaciones": {
+      "name": "Reavaliaciones",
+      "description": "Seguimiento trimestral de evolución de alumnos. Duración estándar: 1 hora. Horario: 8h-20h. Calculada automáticamente (última evaluación/reavaliación + 90 días).",
+      "type": "event",
+      "duration": 60,
+      "businessHours": {
+        "start": "08:00",
+        "end": "20:00",
+        "timezone": "America/Fortaleza",
+        "daysOfWeek": [1, 2, 3, 4, 5, 6]
+      },
+      "bufferTime": {
+        "before": 0,
+        "after": 0
+      },
+      "color": "#F57F17",
+      "relatedFields": {
+        "dateField": "data_reavaliacao",
+        "pipeline": "Carteira de Alunos",
+        "stages": ["Ativo", "Reavaliação"]
+      },
+      "tags": ["reavaliacao-pendente"],
+      "automations": ["Auto 3: Recordatorio 3 días antes", "Auto 3: Notificación vencida a Camila"],
+      "autoScheduling": {
+        "enabled": true,
+        "intervalDays": 90,
+        "basedOn": "data_avaliacao o última reavaliação"
+      },
+      "notes": "Monitoreo crítico de evolución. Auto-schedule cada 90 días. Notificar si vencida."
+    }
+  }
+}

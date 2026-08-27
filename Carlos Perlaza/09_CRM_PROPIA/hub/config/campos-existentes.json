@@ -1,0 +1,180 @@
+{
+  "fecha": "2026-08-19T13:24:20.228Z",
+  "ubicacion": "1nQ7RropfSamHsRQbK8R",
+  "campos_existentes": {
+    "contacts": [],
+    "opportunities": []
+  },
+  "comparacion": {
+    "contacts": {
+      "existentes": [],
+      "faltantes": [
+        {
+          "fieldKey": "op_aberta_nutricao",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "op_aberta_onboarding",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "op_aberta_fidelizacao",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "op_aberta_comercial",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "quantidade_de_followups",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "proximo_retorno_estimado",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "quantidade_de_procedimentos",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "origem_do_lead",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "data_entrada",
+          "estado": "❌ FALTA CREAR"
+        }
+      ]
+    },
+    "opportunities": {
+      "existentes": [],
+      "faltantes": [
+        {
+          "fieldKey": "valor_restante_a_pagar",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "valor_fechado",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "valor_do_lead",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "forecast_expected_close_date",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "data_pagamento",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "data_fim_programa",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "data_inicio_programa",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "format_expected_close_date",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "data_agendamento",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "origem",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "source",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "source_type",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "source_ads",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "utm_campaign",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "utm_medium",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "utm_source",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "produtos_adquiridos",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "programa_vendido",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "renovacion",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "forma_de_pagamento",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "plataforma_checkout",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "dia_da_semana_consulta",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "horario_da_consulta",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "numero_da_consulta",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "canal_consulta",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "dia_para_envio_do_checkin",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "vendedor_responsavel",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "assigned_to",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "medico_de_perda",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "motivo_de_perda",
+          "estado": "❌ FALTA CREAR"
+        },
+        {
+          "fieldKey": "forecast_probability",
+          "estado": "❌ FALTA CREAR"
+        }
+      ]
+    }
+  }
+}

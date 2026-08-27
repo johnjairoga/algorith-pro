@@ -1,0 +1,81 @@
+{
+  "success": [],
+  "failed": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "byCalendar": {
+    "Cirugía Plástica Facial": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Cirugía Plástica Corporal": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Cirugía de Restauración Capilar": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Tratamiento de Restauración Capilar": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Moldeo Corporal": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Tratamientos Láser": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Medicina Estética Antienvejecimiento": {
+      "status": "failed",
+      "error": "No team member found."
+    },
+    "Dermatología y Alergias": {
+      "status": "failed",
+      "error": "No team member found."
+    }
+  },
+  "medicos_por_calendario": {
+    "Cirugía Plástica Facial": [
+      "Dra. Anja Arellano M.",
+      "Dr. Aristides Arellano Huacuja"
+    ],
+    "Cirugía Plástica Corporal": [
+      "Dra. Anja Arellano M.",
+      "Dr. Aristides Arellano Huacuja"
+    ],
+    "Cirugía de Restauración Capilar": [
+      "Dra. Anja Arellano M."
+    ],
+    "Tratamiento de Restauración Capilar": [
+      "Dra. Anja Arellano M.",
+      "Dr. Aristides Arellano Huacuja"
+    ],
+    "Moldeo Corporal": [
+      "Dra. Dafne Arellano Montalvo"
+    ],
+    "Tratamientos Láser": [
+      "Dra. Anja Arellano M."
+    ],
+    "Medicina Estética Antienvejecimiento": [
+      "Dr. Aristides Arellano Huacuja",
+      "Dra. Dafne Arellano Montalvo"
+    ],
+    "Dermatología y Alergias": [
+      "Dr. Aristides Arellano Huacuja",
+      "Dra. Dafne Arellano Montalvo"
+    ]
+  },
+  "startTime": "2026-08-27T03:25:58.596Z",
+  "endTime": "2026-08-27T03:26:11.033Z",
+  "duration": 12.437
+}

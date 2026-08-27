@@ -1,0 +1,14 @@
+{
+  "success": [],
+  "failed": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "byCalendar": {}
+}

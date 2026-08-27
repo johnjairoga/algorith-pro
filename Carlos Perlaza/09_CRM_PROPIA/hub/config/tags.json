@@ -1,0 +1,39 @@
+{
+  "tags": {
+    "origem": [
+      "lead-instagram",
+      "lead-indicacao",
+      "lead-trafego",
+      "lead-gmn",
+      "origem-base-antiga"
+    ],
+    "etapa_comercial": [
+      "avaliacao-agendada",
+      "avaliacao-feita",
+      "proposta-enviada"
+    ],
+    "status_aluno": [
+      "aluno-ativo",
+      "aluno-pausado",
+      "aluno-cancelado"
+    ],
+    "recrutamento": [
+      "candidato-personal",
+      "candidato-aprovado",
+      "candidato-reprovado"
+    ],
+    "evento": [
+      "aniversariante",
+      "reavaliacao-pendente",
+      "inativo-30dias",
+      "inativo-60dias"
+    ],
+    "integracao": [
+      "instagram-direcionado",
+      "whatsapp-confirmado",
+      "contrato-enviado",
+      "contrato-assinado"
+    ]
+  },
+  "description": "Tags para segmentação e automação de contatos"
+}

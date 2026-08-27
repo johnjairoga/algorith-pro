@@ -1,0 +1,111 @@
+{
+  "locationId": "1nQ7RropfSamHsRQbK8R",
+  "negocio": "Clínica Dermatológica Puebla",
+  "fecha": "2026-08-14",
+  "pipelines": [
+    {
+      "name": "CONSULTA INICIAL",
+      "description": "Conversión de leads en pacientes (tratamientos generales)",
+      "color": "#3498db",
+      "duracionTipica": "1-7 días",
+      "valorTipico": "$150-$300 MXN",
+      "stages": [
+        {
+          "name": "LEAD CAPTURADO",
+          "description": "Lead llega por formulario web, WhatsApp o Instagram"
+        },
+        {
+          "name": "LEAD CUALIFICADO",
+          "description": "Secretaria valida interés y capacidad de pago"
+        },
+        {
+          "name": "CITA AGENDADA",
+          "description": "Paciente selecciona fecha/hora en calendario"
+        },
+        {
+          "name": "CONSULTA REALIZADA",
+          "description": "Doctor completa consulta y genera notas médicas"
+        },
+        {
+          "name": "CONVERTIDO",
+          "description": "Paciente contrata servicios"
+        },
+        {
+          "name": "PERDIDO",
+          "description": "Paciente no contrató - se mueve a Inactivos"
+        }
+      ]
+    },
+    {
+      "name": "APARATOLOGÍA",
+      "description": "Gestión de sesiones con máquinas láser (21 máquinas)",
+      "color": "#e74c3c",
+      "duracionTipica": "30-120 días",
+      "valorTipico": "$300-$2,000 MXN por sesión",
+      "stages": [
+        {
+          "name": "CONSULTA / EVALUACIÓN",
+          "description": "Lead interesado en máquina láser específica"
+        },
+        {
+          "name": "CANDIDATO APROBADO",
+          "description": "Doctor evalúa en consulta y aprueba candidatura"
+        },
+        {
+          "name": "PRIMERA SESIÓN",
+          "description": "Paciente paga primera sesión y se atiende"
+        },
+        {
+          "name": "SESIONES 2-X",
+          "description": "Sesiones en progreso (ciclo de tratamiento)"
+        },
+        {
+          "name": "CICLO COMPLETADO",
+          "description": "Paciente completó todas las sesiones del plan"
+        }
+      ]
+    },
+    {
+      "name": "INACTIVOS + REACTIVACIÓN",
+      "description": "Pacientes sin contacto >30 días + estrategias de re-engagement",
+      "color": "#f39c12",
+      "duracionTipica": "30-60 días",
+      "valorTipico": "$500-$2,000 MXN",
+      "stages": [
+        {
+          "name": "INACTIVO DETECTADO",
+          "description": "Sistema detecta automáticamente >30 días sin contacto"
+        },
+        {
+          "name": "RAZÓN IDENTIFICADA",
+          "description": "Se determina por qué el paciente desapareció"
+        },
+        {
+          "name": "REACTIVADO / PERDIDO",
+          "description": "Paciente regresa o se archiva permanentemente"
+        }
+      ]
+    },
+    {
+      "name": "RECURRENCIA",
+      "description": "Ciclos periódicos (30d, 60d, 90d, trimestral, semestral)",
+      "color": "#27ae60",
+      "duracionTipica": "Recurrente (indefinido)",
+      "valorTipico": "$1,000-$3,000 MXN/mes",
+      "stages": [
+        {
+          "name": "EN RECURRENCIA",
+          "description": "Paciente en ciclo activo (30/60/90d/trimestral/semestral)"
+        },
+        {
+          "name": "SESIÓN COMPLETADA",
+          "description": "Doctor completa tratamiento recurrente"
+        },
+        {
+          "name": "PAUSADO / CANCELADO",
+          "description": "Paciente pausa o cancela permanentemente"
+        }
+      ]
+    }
+  ]
+}

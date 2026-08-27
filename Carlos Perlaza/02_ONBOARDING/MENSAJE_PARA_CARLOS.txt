@@ -1,0 +1,53 @@
+MENSAJE PARA ENVIAR A CARLOS (POR WHATSAPP O EMAIL)
+=====================================================
+
+Hola Carlos,
+
+Para que el miércoles avancemos rápido en la reunión, necesito que completes un FORMULARIO SIMPLE con la información que falta.
+
+📋 INFORMACIÓN QUE NECESITO:
+
+1. Nombres, emails y teléfonos de cada doctor (+ especialidades)
+2. Nombres, emails y teléfonos de las 3 secretarias
+3. Horarios de cada doctor
+4. Servicios con precios en pesos mexicanos
+5. Confirmar: ¿Anticipo 100% o 50% antes de cita?
+6. Dónde está alojado tu sitio web actual
+
+❓ ¿CÓMO COMPLETAR?
+
+Opción A (Visual - Recomendado):
+→ Abre el archivo: FORMULARIO_PENDIENTE_CARLOS.html
+→ Llena los campos en tu navegador
+→ Haz clic en "Descargar como Archivo"
+→ Envíamelo por WhatsApp
+
+Opción B (Texto Simple):
+→ Abre: FORMULARIO_PENDIENTE_CARLOS.md
+→ Completa en un editor de texto
+→ Envíamelo por email o WhatsApp
+
+Opción C (Rápido):
+→ Si prefieres, simplemente envíame un WhatsApp con esta info
+→ Yo la organizo
+
+⏰ PLAZO:
+Idealmente antes del lunes 15 de agosto.
+(Si no, lo hacemos el miércoles en la reunión, pero mejor tenerlo antes)
+
+❗ IMPORTANTE:
+→ Si no sabes algo, DÉJALO EN BLANCO
+→ Si hay detalles que no entiendes, PREGUNTA SIN DUDAR
+→ No hay preguntas tontas
+
+Archivos adjuntos:
+- FORMULARIO_PENDIENTE_CARLOS.html (versión visual - recomendada)
+- FORMULARIO_PENDIENTE_CARLOS.md (versión texto)
+
+¿Dudas? Llámame o escribe.
+
+Gracias! 💪
+
+---
+
+(Si lo envías por WhatsApp, puedes copiar y pegar esto tal cual)

@@ -1,0 +1,135 @@
+{
+  "fecha_extraccion": "2026-08-20T04:38:53.750Z",
+  "endpoint": "https://services.leadconnectorhq.com/opportunities/pipelines",
+  "version": "2021-07-28",
+  "pipelines": {
+    "CONSULTA INICIAL": {
+      "id": "xkzHhT5VWoIM31MGWX7L",
+      "stages": [
+        {
+          "id": "584fffcd-c980-4cbf-bec6-648fb3711701",
+          "name": "LEAD CAPTURADO",
+          "position": 1,
+          "probability": 14.29
+        },
+        {
+          "id": "b24a7aae-f74e-4c14-9b32-0e54cd6922aa",
+          "name": "LEAD CUALIFICADO",
+          "position": 2,
+          "probability": 28.57
+        },
+        {
+          "id": "f101f05c-c394-4115-8df8-b6b673574054",
+          "name": "CITA AGENDADA",
+          "position": 3,
+          "probability": 42.86
+        },
+        {
+          "id": "25ed52ad-6eea-42c0-98dd-815b790078d2",
+          "name": "CONSULTA REALIZADA",
+          "position": 4,
+          "probability": 57.14
+        },
+        {
+          "id": "2ba3a96f-ae4f-4caf-b03d-2554a4271f4e",
+          "name": "CONVERTIDO",
+          "position": 5,
+          "probability": 71.43
+        },
+        {
+          "id": "1bb84664-57ad-4bd5-b227-ff222c2ff2d5",
+          "name": "PERDIDO",
+          "position": 6,
+          "probability": 85.71
+        }
+      ]
+    },
+    "APARATOLOGÍA": {
+      "id": "Udqwii3vUGw4rPUmW4du",
+      "stages": [
+        {
+          "id": "351032f5-8281-4778-b2c8-68a4b0455f12",
+          "name": "CONSULTA / EVALUACIÓN",
+          "position": 1,
+          "probability": 16.67
+        },
+        {
+          "id": "71dcc885-182c-4029-9d56-f703bcbabb31",
+          "name": "CANDIDATO APROBADO",
+          "position": 2,
+          "probability": 33.33
+        },
+        {
+          "id": "00cc9543-999a-4e45-9c1b-c85b53261708",
+          "name": "PRIMERA SESIÓN",
+          "position": 3,
+          "probability": 50
+        },
+        {
+          "id": "ea377008-2a19-4b2d-8c35-3324642cac24",
+          "name": "SESIONES 2-X",
+          "position": 4,
+          "probability": 66.67
+        },
+        {
+          "id": "93e39f79-9b55-4c0f-b5d7-d3886a61b59c",
+          "name": "CICLO COMPLETADO",
+          "position": 5,
+          "probability": 83.33
+        }
+      ]
+    },
+    "RECURRENCIA": {
+      "id": "l2n52Su96kE0eiLJtDe5",
+      "stages": [
+        {
+          "id": "520c2f92-0f4f-44be-b33a-69d264630e49",
+          "name": "EN RECURRENCIA",
+          "position": 0,
+          "probability": 25
+        },
+        {
+          "id": "0aece746-5588-4514-9714-4fb5ed2d2e78",
+          "name": "SESIÓN COMPLETADA",
+          "position": 1,
+          "probability": 50
+        },
+        {
+          "id": "c911aa2f-febf-4de3-92f7-90b1fec934eb",
+          "name": "PAUSADO",
+          "position": 2,
+          "probability": 75
+        },
+        {
+          "id": "97be041a-b6b4-4454-a64e-3ce255a017b5",
+          "name": "CANCELADO",
+          "position": 3,
+          "probability": 75
+        }
+      ]
+    },
+    "INACTIVOS": {
+      "id": "y33iaoDH4vrFXfQrngwS",
+      "stages": [
+        {
+          "id": "8b82b026-9617-4c24-a902-f37ba2fa0517",
+          "name": "INACTIVOS",
+          "position": 0,
+          "probability": 20
+        },
+        {
+          "id": "f62bbe58-a2cb-4fc5-87f2-6c091192f951",
+          "name": "REACTIVACION",
+          "position": 1,
+          "probability": 40
+        },
+        {
+          "id": "4edac89f-2233-4044-9602-21172f80b3b2",
+          "name": "RESPONDEÓ",
+          "position": 2,
+          "probability": 60
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "hub-triadeflow-personal-geronto",
+  "version": "0.1.0",
+  "description": "Integração com GHL para Personal Geronto - Pipelines, Automações e Campos",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup:phase1": "node src/cli/setupPhase1.js",
+    "setup:phase1-2": "node src/cli/setupPhase1Step2.js",
+    "setup:all": "node src/cli/setupComplete.js"
+  },
+  "keywords": [
+    "ghl",
+    "personal-geronto",
+    "pipelines",
+    "automations"
+  ],
+  "author": "Triadeflow",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {}
+}

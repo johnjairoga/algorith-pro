@@ -1,0 +1,162 @@
+═══════════════════════════════════════════════════════════════════════════════
+TEMPLATE DE EMAIL PARA ENVIAR A CARLOS PERLAZA
+═══════════════════════════════════════════════════════════════════════════════
+
+ASUNTO: Documentación Confirmada - Proyecto Automatización Clínica + Link de Pago
+
+───────────────────────────────────────────────────────────────────────────────
+
+Hola Carlos,
+
+Espero estés bien. Como acordamos en la llamada, aquí te comparto toda la documentación
+del proyecto, junto con los links de pago y detalles para nuestro encuentro del miércoles.
+
+📋 DOCUMENTOS ADJUNTOS:
+
+1. **Contrato_Prestacion_Servicios.html** ← IMPORTANTE
+   - Contrato completo de prestación de servicios
+   - Revisa, completa los datos que faltan ([A definir])
+   - Estará listo para firmar en la reunión del miércoles
+
+2. **RESUMEN_ACUERDOS_LLAMADA.md**
+   - Resumen ejecutivo de nuestra conversación
+   - Todos los puntos acordados documentados
+   - Referencia para cualquier duda
+
+3. **QUICK_REFERENCE.md**
+   - Resumen visual compacto
+   - Usa esto para referencia rápida en meetings
+
+4. **CHECKLIST_TAREAS_PENDIENTES.md**
+   - Todas las tareas detalladas
+   - Cronograma completo del proyecto
+   - Lo mantendremos actualizado juntos
+
+5. **README.md**
+   - Índice y guía de todos los documentos
+   - Cómo usar cada uno
+
+💰 PAGOS:
+
+Monto pendiente: $1,000 USD (17,117 pesos mexicanos)
+
+Link de Stripe: [LINK AQUÍ]
+
+Por favor completa este pago hoy o mañana para confirmar que estamos listos para
+comenzar el miércoles. Ya hemos procesado el pago de 250 USD, solo falta este de
+1,000 USD para completar el anticipo del 50%.
+
+📅 REUNIÓN DE ONBOARDING:
+
+**Fecha:** Miércoles [FECHA ESPECÍFICA] a las 9:00 AM (hora México)
+**Duración:** 3 horas
+**Formato:** Llamada virtual
+**Participantes:** Tú, yo y [la doctora si es posible]
+
+**Qué debes traer:**
+- Información completa de la clínica (servicios, doctores, horarios)
+- Datos de hosting y dominio
+- Credenciales de acceso actual
+- Preguntas o dudas que tengas
+
+**Qué cubriremos:**
+- Revisión de funcionalidades
+- Aspectos técnicos (hosting, dominio, SSL)
+- Integración de sistemas
+- Cronograma detallado
+- Inicio formal del proyecto
+
+Confirma la reunión en tu calendario. Te llegó una invitación a tu correo.
+
+🎯 PRÓXIMOS PASOS:
+
+1. ✅ Completar pago de 1,000 USD (hoy/mañana)
+2. ✅ Revisar contrato
+3. ✅ Confirmar asistencia a reunión del miércoles
+4. ✅ Recopilar información de la clínica
+5. ✅ Conectar con la doctora (si es posible para el miércoles)
+
+📞 CONTACTO:
+
+Si tienes preguntas o necesitas aclarar algo, avísame.
+Estoy disponible para una llamada rápida.
+
+Correo: [TU CORREO]
+Teléfono: [TU TELÉFONO]
+
+───────────────────────────────────────────────────────────────────────────────
+
+RESUMEN RÁPIDO DEL ACUERDO:
+
+Setup Inicial: $2,500 USD (42,800 pesos mexicanos)
+├─ Primer pago (50%): $1,250 USD → $250 ✅ + $1,000 ⏳ (hoy/mañana)
+└─ Segundo pago (50%): $1,250 USD → 5 días después de Go Live
+
+Acompañamiento: $500 USD/mes (negociable a modelo híbrido con la doctora)
+
+Timeline: ~45 días hábiles desde onboarding hasta Go Live
+
+Plataforma: Go High Level (cuenta independiente para ti)
+
+Funcionalidades: Agendamiento, historiales, pagos, WhatsApp, campañas, reportes
+
+───────────────────────────────────────────────────────────────────────────────
+
+Espero que todo esté claro. Esto va a ser un gran proyecto para tu agencia.
+
+¡Nos vemos el miércoles a las 9 AM!
+
+Saludos,
+John
+Algorith Pro
+
+═══════════════════════════════════════════════════════════════════════════════
+
+NOTAS PARA JOHN AL ENVIAR ESTE EMAIL:
+
+[ ] Reemplazar [LINK AQUÍ] con link de Stripe de 1,000 USD
+[ ] Reemplazar [FECHA ESPECÍFICA] con fecha exacta del miércoles
+[ ] Reemplazar [TU CORREO] con tu email de Algorith Pro
+[ ] Reemplazar [TU TELÉFONO] con tu teléfono de contacto
+[ ] Adjuntar archivo: Contrato_Prestacion_Servicios_Automatizacion_Carlos_Perlaza.html
+[ ] Adjuntar archivo: RESUMEN_ACUERDOS_LLAMADA.md
+[ ] Adjuntar archivo: QUICK_REFERENCE.md
+[ ] Adjuntar archivo: CHECKLIST_TAREAS_PENDIENTES.md
+[ ] Adjuntar archivo: README.md
+[ ] Cambiar "Asunto" a algo más específico si lo prefieres
+[ ] Confirmar que Carlos aparece en la invitación del calendario
+
+VERSIÓN ALTERNATIVA MÁS BREVE (Si prefieres algo más corto):
+
+───────────────────────────────────────────────────────────────────────────────
+
+Hola Carlos,
+
+Siguiendo lo que acordamos, te envío:
+
+1️⃣ Contrato de prestación de servicios (revisar y firmar)
+2️⃣ Link de Stripe para pagar los $1,000 USD restantes
+3️⃣ Documentación completa del proyecto
+4️⃣ Confirmación de reunión para el miércoles a las 9 AM
+
+📋 Documentos adjuntos:
+- Contrato_Prestacion_Servicios.html (IMPORTANTE)
+- RESUMEN_ACUERDOS_LLAMADA.md
+- QUICK_REFERENCE.md
+- CHECKLIST_TAREAS_PENDIENTES.md
+
+💰 Link de pago: [LINK STRIPE]
+
+Completa el pago hoy o mañana para confirmar el inicio el miércoles.
+
+Cualquier duda, me contactas.
+
+¡Nos vemos el miércoles!
+
+John
+
+───────────────────────────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════════════════════
+FIN DEL TEMPLATE
+═══════════════════════════════════════════════════════════════════════════════

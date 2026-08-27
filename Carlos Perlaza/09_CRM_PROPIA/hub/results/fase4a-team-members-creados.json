@@ -1,0 +1,28 @@
+{
+  "success": [],
+  "failed": [
+    "Dra. Anja Arellano M.",
+    "Dr. Aristides Arellano Huacuja",
+    "Dra. Dafne Arellano Montalvo"
+  ],
+  "byMedico": {
+    "Dra. Anja Arellano M.": {
+      "status": "failed",
+      "error": "Cannot POST /locations/1nQ7RropfSamHsRQbK8R/users",
+      "email": "anja.arellano@clinicapuebla.com"
+    },
+    "Dr. Aristides Arellano Huacuja": {
+      "status": "failed",
+      "error": "Cannot POST /locations/1nQ7RropfSamHsRQbK8R/users",
+      "email": "aristides.arellano@clinicapuebla.com"
+    },
+    "Dra. Dafne Arellano Montalvo": {
+      "status": "failed",
+      "error": "Cannot POST /locations/1nQ7RropfSamHsRQbK8R/users",
+      "email": "dafne.arellano@clinicapuebla.com"
+    }
+  },
+  "startTime": "2026-08-27T03:25:00.627Z",
+  "endTime": "2026-08-27T03:25:04.413Z",
+  "duration": 3.786
+}

@@ -1,0 +1,97 @@
+{
+  "success": [],
+  "failed": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "byCalendar": {
+    "Cirugía Plástica Facial": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Cirugía Plástica Corporal": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Cirugía de Restauración Capilar": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Tratamiento de Restauración Capilar": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Moldeo Corporal": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Tratamientos Láser": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Medicina Estética Antienvejecimiento": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    },
+    "Dermatología y Alergias": {
+      "status": "failed",
+      "error": [
+        "calendarType must be a valid enum value"
+      ]
+    }
+  },
+  "medicos_por_calendario": {
+    "Cirugía Plástica Facial": [
+      "Dra. Anja Arellano M.",
+      "Dr. Aristides Arellano Huacuja"
+    ],
+    "Cirugía Plástica Corporal": [
+      "Dra. Anja Arellano M.",
+      "Dr. Aristides Arellano Huacuja"
+    ],
+    "Cirugía de Restauración Capilar": [
+      "Dra. Anja Arellano M."
+    ],
+    "Tratamiento de Restauración Capilar": [
+      "Dra. Anja Arellano M.",
+      "Dr. Aristides Arellano Huacuja"
+    ],
+    "Moldeo Corporal": [
+      "Dra. Dafne Arellano Montalvo"
+    ],
+    "Tratamientos Láser": [
+      "Dra. Anja Arellano M."
+    ],
+    "Medicina Estética Antienvejecimiento": [
+      "Dr. Aristides Arellano Huacuja",
+      "Dra. Dafne Arellano Montalvo"
+    ],
+    "Dermatología y Alergias": [
+      "Dr. Aristides Arellano Huacuja",
+      "Dra. Dafne Arellano Montalvo"
+    ]
+  },
+  "startTime": "2026-08-27T03:28:19.656Z",
+  "endTime": "2026-08-27T03:28:30.427Z",
+  "duration": 10.771
+}

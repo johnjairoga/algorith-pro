@@ -1,0 +1,95 @@
+{
+  "success": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "failed": [],
+  "byServicio": {
+    "Cirugía Plástica Facial": {
+      "status": "success",
+      "service_id": "6a8fb3a6e7004c2a27a9fd34",
+      "slug": "cirugia-plastica-facial",
+      "calendar_id": "7V5YmlyEffcms3U8H9dU",
+      "staff": [
+        "JYSG5dACWmGYUGm4Wg5t",
+        "sgFIbd7atepBr4mBfbkn"
+      ]
+    },
+    "Cirugía Plástica Corporal": {
+      "status": "success",
+      "service_id": "6a8fb3a7d7c3da3e62071fb8",
+      "slug": "cirugia-plastica-corporal",
+      "calendar_id": "muQbHTk7eE5uTYaj213G",
+      "staff": [
+        "JYSG5dACWmGYUGm4Wg5t",
+        "sgFIbd7atepBr4mBfbkn"
+      ]
+    },
+    "Cirugía de Restauración Capilar": {
+      "status": "success",
+      "service_id": "6a8fb3afa7bc88b139df78e2",
+      "slug": "cirugia-restauracion-capilar",
+      "calendar_id": "83TLMLAXFJksXeeyz542",
+      "staff": [
+        "JYSG5dACWmGYUGm4Wg5t"
+      ]
+    },
+    "Tratamiento de Restauración Capilar": {
+      "status": "success",
+      "service_id": "6a8fb3b1d429e8930531c6f0",
+      "slug": "tratamiento-restauracion-capilar",
+      "calendar_id": "2jBSS0SE8fNI6kq25e4G",
+      "staff": [
+        "JYSG5dACWmGYUGm4Wg5t",
+        "sgFIbd7atepBr4mBfbkn"
+      ]
+    },
+    "Moldeo Corporal": {
+      "status": "success",
+      "service_id": "6a8fb3b2db5844f8be1d5bc5",
+      "slug": "moldeo-corporal",
+      "calendar_id": "nVcErRv4ArTdzV9qia4H",
+      "staff": [
+        "WPleSzuP5vPp0WlQ7u3a"
+      ]
+    },
+    "Tratamientos Láser": {
+      "status": "success",
+      "service_id": "6a8fb3b40e36318694eb845b",
+      "slug": "tratamientos-laser",
+      "calendar_id": "BdRChNBHRGVO6guC0YPW",
+      "staff": [
+        "JYSG5dACWmGYUGm4Wg5t"
+      ]
+    },
+    "Medicina Estética Antienvejecimiento": {
+      "status": "success",
+      "service_id": "6a8fb3b5e5c3af7a26671e81",
+      "slug": "medicina-estetica-antienvejecimiento",
+      "calendar_id": "wSdVW29vz7s4iq4uE9db",
+      "staff": [
+        "sgFIbd7atepBr4mBfbkn",
+        "WPleSzuP5vPp0WlQ7u3a"
+      ]
+    },
+    "Dermatología y Alergias": {
+      "status": "success",
+      "service_id": "6a8fb3b7a4565e2bfb869332",
+      "slug": "dermatologia-alergias",
+      "calendar_id": "5sgP6s4tuXrs8pN7oOlt",
+      "staff": [
+        "sgFIbd7atepBr4mBfbkn",
+        "WPleSzuP5vPp0WlQ7u3a"
+      ]
+    }
+  },
+  "startTime": "2026-08-27T03:48:53.286Z",
+  "endTime": "2026-08-27T03:49:11.695Z",
+  "duration": 18.409
+}

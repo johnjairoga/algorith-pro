@@ -1,0 +1,153 @@
+{
+  "success": [],
+  "failed": [
+    "Cirugía Plástica Facial",
+    "Cirugía Plástica Corporal",
+    "Cirugía de Restauración Capilar",
+    "Tratamiento de Restauración Capilar",
+    "Moldeo Corporal",
+    "Tratamientos Láser",
+    "Medicina Estética Antienvejecimiento",
+    "Dermatología y Alergias"
+  ],
+  "byCalendar": {
+    "Cirugía Plástica Facial": {
+      "status": "failed",
+      "error": "Invalid team members: medico_001,medico_002"
+    },
+    "Cirugía Plástica Corporal": {
+      "status": "failed",
+      "error": "Invalid team members: medico_001,medico_002"
+    },
+    "Cirugía de Restauración Capilar": {
+      "status": "failed",
+      "error": "Invalid team members: medico_001"
+    },
+    "Tratamiento de Restauración Capilar": {
+      "status": "failed",
+      "error": "Invalid team members: medico_001,medico_002"
+    },
+    "Moldeo Corporal": {
+      "status": "failed",
+      "error": "Invalid team members: medico_003"
+    },
+    "Tratamientos Láser": {
+      "status": "failed",
+      "error": "Invalid team members: medico_001"
+    },
+    "Medicina Estética Antienvejecimiento": {
+      "status": "failed",
+      "error": "Invalid team members: medico_002,medico_003"
+    },
+    "Dermatología y Alergias": {
+      "status": "failed",
+      "error": "Invalid team members: medico_002,medico_003"
+    }
+  },
+  "medicos": [
+    {
+      "id": "medico_001",
+      "nombre_completo": "Dra. Anja Arellano M.",
+      "email": "anja.arellano@clinicapuebla.com",
+      "telefono_laboral": "81 46 82 32 89",
+      "telefono_personal": "222-954-3542",
+      "especialidades": [
+        "Cirugía Estética",
+        "Restauración Capilar",
+        "Tratamientos Láser"
+      ],
+      "certificaciones": [
+        "FAFS - Fellow American Academy of Facial Surgery",
+        "FABCS - Fellow American Board Cosmetic Surgery"
+      ],
+      "rol": "Doctor",
+      "bio": "Especialista en Cirugía Estética, Restauración Capilar y Tratamientos Láser con más de 15 años de experiencia en procedimientos dermatológicos avanzados.",
+      "foto_url": "https://via.placeholder.com/500?text=Dra.+Anja+Arellano",
+      "horarios": {
+        "lunes_viernes": "9:00 AM - 6:00 PM",
+        "sabado": "9:00 AM - 2:00 PM",
+        "domingo": "Cerrado"
+      },
+      "servicios_atiende": [
+        "Cirugía Plástica Facial",
+        "Cirugía Plástica Corporal",
+        "Cirugía de Restauración Capilar",
+        "Tratamiento de Restauración Capilar",
+        "Tratamientos Láser"
+      ],
+      "videollamadas": true,
+      "plataforma_videoconferencia": "Google Meet",
+      "estado": "activo",
+      "fecha_registro": "2026-08-27"
+    },
+    {
+      "id": "medico_002",
+      "nombre_completo": "Dr. Aristides Arellano Huacuja",
+      "email": "aristides.arellano@clinicapuebla.com",
+      "telefono_laboral": "22 23 23 09 72",
+      "telefono_alternativo": "22 22 39 26 21",
+      "especialidades": [
+        "Cirugía Plástica",
+        "Cirugía Estética",
+        "Cirugía Reconstructiva",
+        "Medicina Estética"
+      ],
+      "certificaciones": [
+        "FICS - Fellow International College of Surgeons"
+      ],
+      "rol": "Doctor",
+      "bio": "Cirujano Plástico especializado en procedimientos estéticos y reconstructivos con certificación internacional y amplia experiencia en medicina estética.",
+      "foto_url": "https://via.placeholder.com/500?text=Dr.+Aristides+Arellano",
+      "horarios": {
+        "lunes_viernes": "9:00 AM - 6:00 PM",
+        "sabado": "10:00 AM - 1:00 PM",
+        "domingo": "Cerrado"
+      },
+      "servicios_atiende": [
+        "Cirugía Plástica Facial",
+        "Cirugía Plástica Corporal",
+        "Tratamiento de Restauración Capilar",
+        "Medicina Estética Antienvejecimiento",
+        "Dermatología y Alergias"
+      ],
+      "videollamadas": true,
+      "plataforma_videoconferencia": "Zoom",
+      "estado": "activo",
+      "fecha_registro": "2026-08-27"
+    },
+    {
+      "id": "medico_003",
+      "nombre_completo": "Dra. Dafne Arellano Montalvo",
+      "email": "dafne.arellano@clinicapuebla.com",
+      "telefono_laboral": "81 45 67 89 01",
+      "especialidades": [
+        "Medicina Estética",
+        "Dermatología",
+        "Tratamientos Anti-envejecimiento"
+      ],
+      "certificaciones": [
+        "Especialista en Medicina Estética"
+      ],
+      "rol": "Doctor",
+      "bio": "Especialista en Medicina Estética y Dermatología, enfocada en tratamientos anti-envejecimiento con enfoque natural y resultados duraderos.",
+      "foto_url": "https://via.placeholder.com/500?text=Dra.+Dafne+Arellano",
+      "horarios": {
+        "lunes_viernes": "9:00 AM - 6:00 PM",
+        "sabado": "9:00 AM - 2:00 PM",
+        "domingo": "Cerrado"
+      },
+      "servicios_atiende": [
+        "Moldeo Corporal",
+        "Medicina Estética Antienvejecimiento",
+        "Dermatología y Alergias"
+      ],
+      "videollamadas": true,
+      "plataforma_videoconferencia": "Google Meet",
+      "estado": "activo",
+      "fecha_registro": "2026-08-27"
+    }
+  ],
+  "startTime": "2026-08-27T03:24:23.686Z",
+  "endTime": "2026-08-27T03:24:35.235Z",
+  "duration": 11.549
+}

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Pendiente - Clínica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 30px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border: none;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background: #f0f0f0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95em;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .checkbox-group {
+            margin: 15px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .note {
+            background: #f0f7ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .note em {
+            color: #667eea;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+
+        .footer p {
+            margin: 8px 0;
+        }
+
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-save {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-clear {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-clear:hover {
+            background: #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Información que Necesitamos</h1>
+            <p>Completa los campos para que podamos avanzar rápido</p>
+        </div>
+
+        <form id="formulario" class="content">
+
+            <!-- Sección 1: Doctores -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">1️⃣</span>
+                    Doctores de la Clínica
+                </div>
+                <p>Nombre, email, teléfono y especialidades de cada doctor</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre Completo</th>
+                            <th>Especialidades</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="doctor1_nombre"></td>
+                            <td><input type="text" name="doctor1_esp" placeholder="Ej: Cirugía Plástica"></td>
+                            <td><input type="email" name="doctor1_email"></td>
+                            <td><input type="tel" name="doctor1_tel"></td>
+                            <td><select name="doctor1_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="doctor2_nombre"></td>
+                            <td><input type="text" name="doctor2_esp" placeholder="Ej: Láser"></td>
+                            <td><input type="email" name="doctor2_email"></td>
+                            <td><input type="tel" name="doctor2_tel"></td>
+                            <td><select name="doctor2_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="doctor3_nombre"></td>
+                            <td><input type="text" name="doctor3_esp"></td>
+                            <td><input type="email" name="doctor3_email"></td>
+                            <td><input type="tel" name="doctor3_tel"></td>
+                            <td><select name="doctor3_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" name="doctor4_nombre"></td>
+                            <td><input type="text" name="doctor4_esp"></td>
+                            <td><input type="email" name="doctor4_email"></td>
+                            <td><input type="tel" name="doctor4_tel"></td>
+                            <td><select name="doctor4_tipo"><option>Fijo</option><option>Volante</option></select></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">✏️ Si hay más doctores, agrega más filas</div>
+            </div>
+
+            <!-- Sección 2: Secretarias -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">2️⃣</span>
+                    Secretarias
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre Completo</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="sec1_nombre"></td>
+                            <td><input type="email" name="sec1_email"></td>
+                            <td><input type="tel" name="sec1_tel"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="sec2_nombre"></td>
+                            <td><input type="email" name="sec2_email"></td>
+                            <td><input type="tel" name="sec2_tel"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="sec3_nombre"></td>
+                            <td><input type="email" name="sec3_email"></td>
+                            <td><input type="tel" name="sec3_tel"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sección 3: Horarios -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">3️⃣</span>
+                    Horarios de Trabajo
+                </div>
+                <p>¿A qué hora abren y cierran? (por cada doctor, si varían)</p>
+                <textarea name="horarios" placeholder="Ejemplo:&#10;Dra. María:&#10;Lunes-Viernes: 9:00 AM - 1:00 PM y 3:00 PM - 6:00 PM&#10;Sábado: 10:00 AM - 1:00 PM&#10;Domingo: Cerrado"></textarea>
+            </div>
+
+            <!-- Sección 4: Servicios -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">4️⃣</span>
+                    Servicios y Precios
+                </div>
+                <p>Lista todos los servicios con precio en pesos mexicanos (MXN)</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Servicio</th>
+                            <th>Precio (MXN)</th>
+                            <th>Duración (min)</th>
+                            <th>Especialista</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="serv1_nombre"></td>
+                            <td><input type="number" name="serv1_precio" placeholder="5000"></td>
+                            <td><input type="number" name="serv1_dur" placeholder="60"></td>
+                            <td><input type="text" name="serv1_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" name="serv2_nombre"></td>
+                            <td><input type="number" name="serv2_precio"></td>
+                            <td><input type="number" name="serv2_dur"></td>
+                            <td><input type="text" name="serv2_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" name="serv3_nombre"></td>
+                            <td><input type="number" name="serv3_precio"></td>
+                            <td><input type="number" name="serv3_dur"></td>
+                            <td><input type="text" name="serv3_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" name="serv4_nombre"></td>
+                            <td><input type="number" name="serv4_precio"></td>
+                            <td><input type="number" name="serv4_dur"></td>
+                            <td><input type="text" name="serv4_doc"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" name="serv5_nombre"></td>
+                            <td><input type="number" name="serv5_precio"></td>
+                            <td><input type="number" name="serv5_dur"></td>
+                            <td><input type="text" name="serv5_doc"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">💡 Si tienes más servicios, cópialos en un email o WhatsApp con el resto de respuestas</div>
+            </div>
+
+            <!-- Sección 5: Anticipo -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">5️⃣</span>
+                    Anticipo Antes de Cita
+                </div>
+                <p>¿Cuánto pide antes de la cita?</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" name="anticipo" id="ant100" value="100">
+                        <label for="ant100">100% del total</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="anticipo" id="ant50" value="50">
+                        <label for="ant50">50% del total</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="anticipo" id="antOtro" value="otro">
+                        <label for="antOtro">Otro: <input type="text" name="anticipo_otro" style="width: 200px; margin-left: 10px;" placeholder="Especifica"></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 6: Hosting -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="section-number">6️⃣</span>
+                    Hosting Actual
+                </div>
+                <p>¿Dónde está tu sitio web ahora?</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" id="host_godaddy" value="godaddy">
+                        <label for="host_godaddy">Godaddy</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" id="host_namecheap" value="namecheap">
+                        <label for="host_namecheap">Namecheap</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" id="host_aws" value="aws">
+                        <label for="host_aws">AWS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" name="hosting" id="host_otro" value="otro">
+                        <label for="host_otro">Otro: <input type="text" name="hosting_otro" style="width: 200px; margin-left: 10px;"></label>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <label><strong>¿Quién tiene el acceso/contraseña?</strong></label>
+                    <input type="text" name="hosting_contacto" placeholder="Nombre y contacto de la persona">
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="button-group">
+                <button type="button" class="btn-clear" onclick="document.getElementById('formulario').reset();">Limpiar</button>
+                <button type="button" class="btn-save" onclick="descargarFormulario();">⬇️ Descargar como Archivo</button>
+            </div>
+        </form>
+
+        <div class="footer">
+            <p><strong>¿No sabes qué poner?</strong> Déjalo en blanco — lo aclaramos en la reunión del miércoles.</p>
+            <p><strong>¿Preguntas?</strong> Pregunta sin dudar. No hay preguntas tontas.</p>
+            <p style="margin-top: 20px; color: #999; font-size: 0.9em;">Gracias por tu ayuda, Carlos. Con estos datos avanzamos rápido. 💪</p>
+        </div>
+    </div>
+
+    <script>
+        function descargarFormulario() {
+            const formData = new FormData(document.getElementById('formulario'));
+            let contenido = "INFORMACIÓN PARA LA CLÍNICA\n";
+            contenido += "=" .repeat(50) + "\n\n";
+
+            for (let [key, value] of formData) {
+                if (value) {
+                    contenido += key + ": " + value + "\n";
+                }
+            }
+
+            const blob = new Blob([contenido], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'formulario_clinica_' + new Date().toISOString().split('T')[0] + '.txt';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
